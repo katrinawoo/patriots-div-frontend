@@ -157,9 +157,9 @@
     width: #{$width}; // Width of the line
     height: #{$height}; // Height of the line
     background-color: rgba(red($color), green($color), blue($color), $opacity); // #HEX with X% opacity
-    top: 0;
+    top: 40%;
     left: 0;
-    transform: rotate(45deg); // 45° rotation
-    transform-origin: top left; // Ensure the rotation pivots from the top left corner
+    transform: rotate(135deg); // 45° rotation
+    transform-origin: center; // Ensure the rotation pivots from the top left corner
     }
 

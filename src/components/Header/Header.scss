@@ -86,19 +86,13 @@
         padding-top: 0.5rem;
     }
 
-//   &__item {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 2.25rem;
-//     width: 50%;
-//     font-weight: 600;
-//     font-size: 0.8125rem;
-//     text-decoration: none;
-//     background-color: $graphite-blue-grey;
-//     border: 1px solid $graphite-blue-grey;
-//     color: $cloud-medium-grey;
-//     border-radius: 5rem;
+  &__item {
+    position: relative;
+
+    &::after {
+        // @mixin diagonal-line($width, $height, $color, $opacity)
+        @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.2); //57px, 1.26px, $gray-line, 20%
+    }
 
 //     &:hover {
 //       text-decoration: underline;
@@ -118,4 +112,5 @@
 //   @include tablet-breakpoint {
 //     width: 7.5rem;
 //   }
+}
 }
