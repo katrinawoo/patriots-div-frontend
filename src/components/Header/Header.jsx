@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo/138-PD-logo.png";
 import menuIcon from "../../assets/icons/1193-nav-menu-icon.png";
+import HeaderModal from "../HeaderModal/HeaderModal";
 import "./Header.scss";
 
 export default function Header() {
@@ -78,6 +79,8 @@ export default function Header() {
         </div>
 
       </div>
+
+      <HeaderModal isOpen={isModalOpen} toggleModal={toggleModal} />
     </header>
   );
 }

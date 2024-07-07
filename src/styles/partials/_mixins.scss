@@ -1,13 +1,16 @@
 @use "./variables" as *;
+@use "./typography" as *;
 
 @mixin tablet-breakpoint {
   @media (min-width: $tablet-breakpoint) {
+    transition: all 0.4s ease;
     @content;
   }
 }
 
 @mixin desktop-breakpoint {
   @media (min-width: $desktop-breakpoint) {
+    transition: all 0.4s ease;
     @content;
   }
 }
@@ -98,18 +101,8 @@
         }
   }
 
-  
-// @mixin H3-text-style {
-//     font-size: 0.8125rem; //13px
-//     line-height: 1.25rem; //20px
-//     font-weight: $demi-txt;
-//     letter-spacing: $letter-spacing;
-//     @include tablet-breakpoint() {
-//         font-size: 0.875rem; //14px
-//         line-height: 1.375rem; //22px
-//     }
-//   }
 
+// For Nav Bar
 @mixin H4-text-style {
     font-size: 0.84rem; //13.39px
     line-height: 1.05rem; //16.74px
@@ -118,38 +111,24 @@
     color: $white-nav;
   }
 
-// @mixin P1-text-style {
-//     font-size: 0.9375rem; //15px
-//     line-height: 1.625rem; //26px
-//     font-weight: $regular-txt;
-//     letter-spacing: $letter-spacing;
-//     @include tablet-breakpoint() {
-//         font-size: 1rem; //16px
-//         line-height: 1.75rem; //28px
-//     }
-//   }
+// For Nav Header Modal
+@mixin H5-text-style {
+    font-size: 1.52rem; //24.39px
+    line-height: 1.91rem; //30.49px
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: $white-nav;
+  }
 
-// @mixin P2-text-style {
-//     font-size: 0.8125rem; //13px
-//     line-height: 1.25rem; //20px
-//     font-weight: $regular-txt;
-//     letter-spacing: $letter-spacing;
-//     @include tablet-breakpoint() {
-//         font-size: 0.875rem; //14px
-//         line-height: 1.375rem; //22px
-//     }
-//   }
+// For Nav Header Modal -- Footer
+  @mixin P5-text-style {
+      font-size: 0.611rem; //9.78px
+      line-height: 0.76rem; //12.22px
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      color: $white;
+    }
 
-// @mixin P3-text-style {
-//     font-size: 0.6875rem; //11px
-//     line-height: 1rem; //16px
-//     font-weight: $regular-txt;
-//     letter-spacing: $letter-spacing;
-//     @include tablet-breakpoint() {
-//         font-size: 0.75rem; //12px
-//         line-height: 1.125rem; //18px
-//     }
-//   }
 
 @mixin diagonal-line($width, $height, $color, $opacity) {
     content: '';
@@ -157,9 +136,8 @@
     width: #{$width}; // Width of the line
     height: #{$height}; // Height of the line
     background-color: rgba(red($color), green($color), blue($color), $opacity); // #HEX with X% opacity
-    top: 40%;
-    left: 0;
-    transform: rotate(135deg); // 45° rotation
-    transform-origin: center; // Ensure the rotation pivots from the top left corner
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
     }
 
