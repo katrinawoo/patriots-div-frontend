@@ -19,14 +19,13 @@
         padding: 1.5rem 2rem;
     }
 
-//     @include desktop-breakpoint {
-//       padding: 2rem 0 0 0;
-//       @include desktop-margins;
-//     }
+    @include desktop-breakpoint {
+      padding: 2rem 0 0 0;
+      @include desktop-margins;
+    }
 
     
   }
-// }
 
 &__logo {
   display: flex;
@@ -51,14 +50,6 @@
   &__item {
     @include H4-text-style;
   }
-
-//   gap: 1rem;
-//   padding: 0 1rem;
-
-//   @include tablet-breakpoint {
-//     margin: 0 0 0 auto;
-//     padding: 0;
-//   }
 
     &--mobile {
         display: flex;
@@ -94,23 +85,16 @@
         @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.2); //57px, 1.26px, $gray-line, 20%
     }
 
-//     &:hover {
-//       text-decoration: underline;
-//     }
-    
-//     @include tablet-breakpoint {
-//       width: 4.5rem;
-//     }
-//   }
+    &:hover {
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      color: $white-nav;
+    }
+}
+}
 }
 
-// .active {
-//   background-color: $black;
-//   border: 1px solid $black;
-//   color: white;
-
-//   @include tablet-breakpoint {
-//     width: 7.5rem;
-//   }
-}
+.active {
+  text-decoration: underline;
+  color: white;
 }
