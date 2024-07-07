@@ -1,0 +1,65 @@
+//COLOURS
+$black-background: #0F1619; //PD-Black
+$black-header: #1B1D34; 
+$white: #ffffff; //used for all text
+$white-nav: #F0F0F0;
+$white-background: #EBF0F3; 
+$gray-line: #D9D9D9;
+$blue-header: #334C8D;
+$blue-text: #252A57;
+$blue-button: #435D9E; 
+
+
+//SCREEN BREAKPOINTS
+$min-mobile-screen: 320px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1280px;
+
+
+//WIDTH OF CONTENT FOR DESKTOP
+$desktop-width: 1020px; //added up components from layout grid in style guide 
+
+
+// TEXT STYLES
+$letter-spacing: 0.02em; //2% letter spacing on figma
+
+
+//FORM AND BUTTON PROPERTIES
+$radius: 20px;
+$border-button: 1px;
+
+
+// TABLET & DESKTOP BUTTON STYLES
+$tabletLabelButtonLineHeight: 1.375rem; //22px
+$m-button-height: 2.25rem; //36px
+$td-button-height: 2.375rem; //38px
+
+
+// PADDING PROPERTIES
+// $m for mobile, $t for tablet, $ for desktop 
+// $td for both
+$td-padding-top: 2rem; //32px
+$m-padding-space: 1rem; //16px
+$t-padding-space: 1rem; //16px
+$d-padding-space: 1.125rem; //18px
+$m-padding-sides: 1rem; //16px
+$m-padding-sides2: 1.5rem; //24px
+$t-padding-sides: 2rem; //32px
+$d-padding-sides: 2.5rem; //40px
+
+$min-spacing: 0.25rem; //4px
+
+//POPUP PADDING
+$m-popup-padding-left: 1rem; //16px
+$td-popup-padding-left: 4rem; //64px
+$m-popup-padding-top: 3.75rem; //60px
+$td-popup-padding-top: 2.5rem; //40px
+$m-popup-padding-space: 1rem; // 16px
+$m-popup-padding-space-between-buttons: 1.0625rem; // 17px
+$td-popup-padding-space: 1rem; // 16px
+$td-popup-padding-space-double: 2rem; //32px
+
+
+// FORM AND SEARCH VARIABLES
+$form-padding-left: 1rem; //16px same for searchbar
+$form-padding-top-bottom: 0.5rem; //8px  same for searchbar

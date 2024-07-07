@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
+// import WarehouseListPage from "../src/pages/WarehouseListPage/WarehouseListPage.jsx";
+// import WarehouseDetailsPage from "../src/pages/WarehouseDetailsPage/WarehouseDetailsPage.jsx";
+// import WarehouseFormPage from "../src/pages/WarehouseFormPage/WarehouseFormPage.jsx";
+// import InventoryPage from "../src/pages/InventoryPage/InventoryPage.jsx";
+// import ItemDetailsPage from "../src/pages/ItemDetailsPage/ItemDetailsPage.jsx";
+import Header from "../src/components/Header/Header.jsx";
+// import Footer from "../src/components/Footer/Footer.jsx";
+// import EditWarehouse from "./pages/EditWarehouse/EditWarehouse.jsx";
+// import AddInventoryPage from "../src/pages/AddInventoryPage/AddInventoryPage.jsx";
+import "./App.scss";
+// import EditInventoryPage from "./pages/EditInventoryPage/EditInventoryPage.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Header />
+
+        {/* <Routes>
+          <Route path="/" element={<WarehouseListPage />} />
+          <Route path="/warehouses" element={<WarehouseListPage />} />
+          <Route
+            path="/warehouses/:warehouseId"
+            element={<WarehouseDetailsPage />}
+          />
+          <Route
+            path="/warehouses/:warehouseId/edit"
+            element={<EditWarehouse />}
+          />
+          <Route path="/warehouses/new" element={<WarehouseFormPage />} />
+          <Route path="/inventory" element={<InventoryPage />} />
+          <Route path="/inventory/:itemId" element={<ItemDetailsPage />} />
+          <Route path="/inventory/:itemId/edit" element={<EditInventoryPage />} />
+          <Route path="/inventory/new" element={<AddInventoryPage />} />
+        </Routes>
+
+          <Footer /> */}
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

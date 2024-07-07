@@ -1,0 +1,42 @@
+@use "./typography" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oxanium", sans-serif;
+  color: $blue-text;
+  width: auto;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+  min-width: $min-mobile-screen;
+  background-color: $white-background;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+h1 {
+  @include H1-pageheader-text-style;
+}
+
+/* Example element styling */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

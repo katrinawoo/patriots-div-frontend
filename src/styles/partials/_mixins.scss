@@ -1,0 +1,165 @@
+@use "./variables" as *;
+
+@mixin tablet-breakpoint {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-margins {
+  max-width: $desktop-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin tablet-padding-sides {
+  padding-right: $t-padding-sides;
+  padding-left: $t-padding-sides;
+  @include desktop-breakpoint() {
+    padding-right: $d-padding-sides;
+    padding-left: $d-padding-sides;
+  }
+}
+
+@mixin component-overlay {
+  margin-top: -4rem; //88px-24px=64px above top of footer per figma
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: calc(100% - 2 * $m-padding-sides);
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10;
+  border-radius: 0.3125rem;
+  box-shadow: 0rem 0.125rem 0.3125rem 0rem rgba(19, 24, 44, 0.1);
+  @include tablet-breakpoint() {
+    margin-top: -5.875rem; //121px-27px=94px above top of footer per figma
+    width: calc(100% - 2 * $t-padding-sides);
+  }
+}
+
+@mixin component-overlay-short {
+  margin-top: -4rem; //88px-24px=64px above top of footer per figma
+  margin-bottom: 5rem;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10;
+  border-radius: 0.3125rem;
+  box-shadow: 0rem 0.125rem 0.3125rem 0rem rgba(19, 24, 44, 0.1);
+  @include tablet-breakpoint() {
+    margin-top: -5.875rem; //121px-27px=94px above top of footer per figma
+  }
+}
+
+@mixin component-header {
+  height: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  @include tablet-breakpoint {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// TEXT STYLES FOR TABLET AND DESKTOP
+@mixin H1-pageheader-text-style {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4.69rem; //75.06px
+    line-height: 3.75rem; //60.05px
+    font-weight: 400;
+    letter-spacing: $letter-spacing;
+    color: $blue-header;
+    // Apply the drop shadow using the variable
+    box-shadow: 0 0.18rem 3.3675rem rgba(red($white), green($white), blue($white), 0.5); // 0px 2.89px 53.88px 50% opacity
+    
+    @include tablet-breakpoint() {
+        font-size: 8.4rem; //134.39px
+        line-height: 6.72rem; //107.51px
+        font-weight: 400;
+        // Apply the drop shadow using the variable
+        box-shadow: 0 0.25rem 4.66rem rgba(red($white), green($white), blue($white), 0.5); // 0px 4px 74.6px 50% opacity
+        }
+  }
+
+  
+// @mixin H3-text-style {
+//     font-size: 0.8125rem; //13px
+//     line-height: 1.25rem; //20px
+//     font-weight: $demi-txt;
+//     letter-spacing: $letter-spacing;
+//     @include tablet-breakpoint() {
+//         font-size: 0.875rem; //14px
+//         line-height: 1.375rem; //22px
+//     }
+//   }
+
+@mixin H4-text-style {
+    font-size: 0.84rem; //13.39px
+    line-height: 1.05rem; //16.74px
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: $white-nav;
+  }
+
+// @mixin P1-text-style {
+//     font-size: 0.9375rem; //15px
+//     line-height: 1.625rem; //26px
+//     font-weight: $regular-txt;
+//     letter-spacing: $letter-spacing;
+//     @include tablet-breakpoint() {
+//         font-size: 1rem; //16px
+//         line-height: 1.75rem; //28px
+//     }
+//   }
+
+// @mixin P2-text-style {
+//     font-size: 0.8125rem; //13px
+//     line-height: 1.25rem; //20px
+//     font-weight: $regular-txt;
+//     letter-spacing: $letter-spacing;
+//     @include tablet-breakpoint() {
+//         font-size: 0.875rem; //14px
+//         line-height: 1.375rem; //22px
+//     }
+//   }
+
+// @mixin P3-text-style {
+//     font-size: 0.6875rem; //11px
+//     line-height: 1rem; //16px
+//     font-weight: $regular-txt;
+//     letter-spacing: $letter-spacing;
+//     @include tablet-breakpoint() {
+//         font-size: 0.75rem; //12px
+//         line-height: 1.125rem; //18px
+//     }
+//   }
+
+@mixin diagonal-line($width, $height, $color, $opacity) {
+    content: '';
+    position: absolute;
+    width: #{$width}; // Width of the line
+    height: #{$height}; // Height of the line
+    background-color: rgba(red($color), green($color), blue($color), $opacity); // #HEX with X% opacity
+    top: 0;
+    left: 0;
+    transform: rotate(45deg); // 45° rotation
+    transform-origin: top left; // Ensure the rotation pivots from the top left corner
+    }
+
