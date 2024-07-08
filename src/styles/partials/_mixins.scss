@@ -81,7 +81,7 @@
   }
 }
 
-// TEXT STYLES FOR TABLET AND DESKTOP
+// TEXT STYLES FOR MOBILE, TABLET AND DESKTOP
 @mixin H1-pageheader-text-style {
     font-family: "Bebas Neue", sans-serif;
     font-size: 4.69rem; //75.06px
@@ -99,6 +99,24 @@
         font-weight: 400;
         // Apply the drop shadow using the variable
         box-shadow: 0 0.25rem 4.66rem rgba(red($white), green($white), blue($white), 0.5); // 0px 4px 74.6px 50% opacity
+        }
+  }
+
+
+//TAGLINE
+
+@mixin H2-pageheader-text-style {
+    font-size: 0.785rem; //12.56px
+    line-height: 1.78rem; //28.5px
+    font-weight: 600;
+    letter-spacing: 0.6em;
+    color: $blue-header;
+    text-transform: uppercase;
+    
+    @include tablet-breakpoint() {
+        font-size: 1rem; //16px
+        line-height: 2.27rem; //36.32px
+        font-weight: 500;
         }
   }
 
@@ -121,7 +139,23 @@
     color: $white-nav;
   }
 
-// For Nav Header Modal -- Footer
+
+// For About Us test
+@mixin P1-pageheader-text-style {
+    font-size: 1.125rem; //18px
+    line-height: 1.845rem; //29.52px
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: rgba(red($blue-text), green($blue-text), blue($blue-text), 0.9);
+    
+    @include tablet-breakpoint() {
+        font-size: 1rem; //20px
+        line-height: 2.27rem; //32.8px
+        }
+  }
+
+
+  // For Nav Header Modal -- Footer
   @mixin P5-text-style {
       font-size: 0.611rem; //9.78px
       line-height: 0.76rem; //12.22px
