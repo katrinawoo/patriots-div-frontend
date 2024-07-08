@@ -88,7 +88,8 @@
     line-height: 3.75rem; //60.05px
     font-weight: 400;
     letter-spacing: $letter-spacing;
-    color: $blue-header;
+    color: $black-header;
+    text-transform: uppercase;
     // Apply the drop shadow using the variable
     box-shadow: 0 0.18rem 3.3675rem rgba(red($white), green($white), blue($white), 0.5); // 0px 2.89px 53.88px 50% opacity
     
@@ -128,6 +129,15 @@
       letter-spacing: 0.3em;
       color: $white;
     }
+
+// For Footer-logo component
+  @mixin P6-text-style {
+    font-size: 0.79rem; //12.65px
+    line-height: 1rem; //15.81px
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    color: #000000;
+  }
 
 
 @mixin diagonal-line($width, $height, $color, $opacity) {

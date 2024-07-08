@@ -1,5 +1,5 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GamesHomePage from "../src/pages/GamesHomePage/GamesHomePage.jsx";
 // import WarehouseListPage from "../src/pages/WarehouseListPage/WarehouseListPage.jsx";
 // import WarehouseDetailsPage from "../src/pages/WarehouseDetailsPage/WarehouseDetailsPage.jsx";
 // import WarehouseFormPage from "../src/pages/WarehouseFormPage/WarehouseFormPage.jsx";
@@ -18,9 +18,9 @@ function App() {
       <BrowserRouter>
         <Header />
 
-        {/* <Routes>
-          <Route path="/" element={<WarehouseListPage />} />
-          <Route path="/warehouses" element={<WarehouseListPage />} />
+        <Routes>
+          <Route path="/" element={<GamesHomePage />} />
+          {/* <Route path="/warehouses" element={<WarehouseListPage />} />
           <Route
             path="/warehouses/:warehouseId"
             element={<WarehouseDetailsPage />}
@@ -33,10 +33,10 @@ function App() {
           <Route path="/inventory" element={<InventoryPage />} />
           <Route path="/inventory/:itemId" element={<ItemDetailsPage />} />
           <Route path="/inventory/:itemId/edit" element={<EditInventoryPage />} />
-          <Route path="/inventory/new" element={<AddInventoryPage />} />
+          <Route path="/inventory/new" element={<AddInventoryPage />} /> */}
         </Routes>
 
-          <Footer /> */}
+          {/* <Footer /> */}
       </BrowserRouter>
     </>
   );
