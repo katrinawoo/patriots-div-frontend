@@ -35,7 +35,6 @@ export default function GamesHomePage() {
                     <p>our values</p>
                     <p>are our pillars</p>
                 </div>
-
                 
                 <h1 className="games-home-page__header__title">About Us</h1>
                 

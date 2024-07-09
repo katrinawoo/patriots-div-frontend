@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
 
-.hero-team {
+.hero-contacts {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -13,7 +13,7 @@
     
   
     &__background {
-      background: url('../../assets/images/13-hero-team-background.png') no-repeat center center;
+      background: url('../../assets/images/13-hero-contacts-background.png') no-repeat center center;
       background-size: cover;
       width: 100%;
       height: 44rem;

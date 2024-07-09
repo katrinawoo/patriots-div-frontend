@@ -16,10 +16,10 @@ export default function TeamPage() {
     
   return (
     <main className="team-page">
-        <div>
+        {/* <div>
             <h1>Team</h1>
             <p>Welcome to the Team Page!</p>
-        </div>
+        </div> */}
 
         <HeroTeam />
 {/*         
