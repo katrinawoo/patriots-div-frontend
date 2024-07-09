@@ -1,8 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import Search from "../../components/Search/Search.jsx";
-// import Button from "../../components/Button/Button.jsx";
-// import React from "react";
 import { Link } from "react-router-dom";
 import icon11 from "../../assets/icons/Icon-hover-1.1.png";
 import icon12 from "../../assets/icons/Icon-hover-1.2.png";

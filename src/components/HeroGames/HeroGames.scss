@@ -25,31 +25,11 @@
       z-index: -2;
       pointer-events: none; // Prevent background from intercepting clicks
 
-      @media (max-width: 768px) {
-        // transform: scale(1.2); // Zoom in for tablet screens
-        // right: -25%;
-        // height: 25rem;
-        // clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%); // Adjust the percentage values to create the desired slant
+      @include tablet-breakpoint {
+        height: 40rem;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); // Adjust the percentage values to create the desired slant
       }
-  
-      @media (max-width: 480px) {
-        // transform: scale(1.5); // Zoom in more for mobile screens
-        // height: 30rem;
-        // right: 0;
-      }
-
     }
-  
-    // &__overlay {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 70%;
-    //     background-color: rgba(69, 66, 66, 0.8); // Adjust the opacity as needed
-    //     pointer-events: none; // Allows clicks to pass through the overlay
-    //     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%); // Adjust the percentage values to create the desired slant
-    // }
 
     &__wrapper {
         display: flex;
@@ -77,23 +57,25 @@
         bottom: 0;
         right: 0;
         max-width: $desktop-width;
-        height: 32rem;
+        height: 28rem;
         position: absolute;
-        right: 15%;
+        right: -30%;
         pointer-events: none; // Prevent background from intercepting clicks
         // margin-top: 5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%); // Adjust the percentage values to create the desired slant
+        transform: scale(1.5); // Zoom in more for mobile screens
 
-        @media (max-width: 768px) {
+        @include tablet-breakpoint {
             transform: scale(1.2); // Zoom in for tablet screens
-            right: -25%;
-            height: 32rem;
-          }
-      
-          @media (max-width: 480px) {
-            transform: scale(1.2); // Zoom in more for mobile screens
-            height: 20rem;
-            right: -15%;
-          }
+            right: -20%;
+            height: 38rem;
+        }
+
+        @include desktop-breakpoint {
+            transform: scale(1);
+            right: 10%;
+        }
+
     }
 
     &__content {
@@ -139,6 +121,20 @@
         &__text {
             padding-top: 1rem;
             @include P7-text-style;
+
+            &--mobile {
+                @include tablet-breakpoint{
+                    display: none;
+                }
+            }
+    
+            &--tablet {
+                display: none;
+    
+                @include tablet-breakpoint {
+                    display: inline;
+                }
+            }
         }
     }
 

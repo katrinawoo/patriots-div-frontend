@@ -10,18 +10,18 @@
     flex-direction: column;
     padding: $m-padding-sides;
     width: 100%;
-    margin-top: -20rem;
+    margin-top: -17rem;
 
     @include tablet-breakpoint {
         align-items: center;
         padding: 1.5rem 2rem;
-        margin-top: -10rem;
+        margin-top: -14rem;
     }
 
     @include desktop-breakpoint {
       padding: 2rem 0 0 0;
       @include desktop-margins;
-      margin-top: -18rem;
+      margin-top: -14rem;
     }
 
     
@@ -175,7 +175,6 @@
     &__text {
         @include P2-pageheader-text-style;
         opacity: 40%;
-        
     }
   }
 
@@ -193,9 +192,6 @@
         background-color: $blue-button-hover; 
       }
 
-      &--game {
-        margin-left: -2rem;
-      }
     }
 
     &__icon {
