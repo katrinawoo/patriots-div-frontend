@@ -3,6 +3,7 @@ import GamesHomePage from "../src/pages/GamesHomePage/GamesHomePage.jsx";
 import CareersPage from "./pages/CareersPage/CareersPage.jsx";
 import TeamPage from "./pages/TeamPage/TeamPage.jsx";
 import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
+import JobDetailsPage from "./pages/JobDetailsPage/JobDetailsPage.jsx";
 // import WarehouseListPage from "../src/pages/WarehouseListPage/WarehouseListPage.jsx";
 // import WarehouseDetailsPage from "../src/pages/WarehouseDetailsPage/WarehouseDetailsPage.jsx";
 // import WarehouseFormPage from "../src/pages/WarehouseFormPage/WarehouseFormPage.jsx";
@@ -26,6 +27,8 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
+          
+          <Route path="/careers/:jobId" element={<JobDetailsPage />} />
           
           
           {/* <Route path="/warehouses" element={<WarehouseListPage />} />

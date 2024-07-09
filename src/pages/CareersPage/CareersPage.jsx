@@ -1,12 +1,12 @@
 import "./CareersPage.scss";
 import React from "react";
+import HeroCareers from "../../components/HeroCareers/HeroCareers";
 
 const CareersPage = () => {
   return (
-    <div>
-      <h1>Careers</h1>
-      <p>Welcome to the Careers Page!</p>
-    </div>
+    <main>
+        <HeroCareers />
+    </main>
   );
 };
 

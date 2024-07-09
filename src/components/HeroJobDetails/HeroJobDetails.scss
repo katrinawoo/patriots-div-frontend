@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
 
-.hero-team {
+.hero-job-details {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -13,7 +13,7 @@
     
   
     &__background {
-      background: url('../../assets/images/13-hero-team-background.png') no-repeat center center;
+      background: url('../../assets/images/12-hero-careers-background.png') no-repeat center center;
       background-size: cover;
       width: 100%;
       height: 40rem;
@@ -26,8 +26,8 @@
       pointer-events: none; // Prevent background from intercepting clicks
 
       @include tablet-breakpoint {
-        height: 42rem;
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // Adjust the percentage values to create the desired slant
+        height: 45rem;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); // Adjust the percentage values to create the desired slant
       }
     }
 
@@ -53,8 +53,6 @@
           }
     }
 
-    
-
     &__content {
         z-index: 3;
         display: flex;
@@ -63,6 +61,12 @@
         width: 65%;
         padding-left: 2rem;
         padding-top: 6rem;
+        align-items: center;
+        text-align: center;
+
+        @include tablet-breakpoint{
+            width: 100%;
+        }
 
         &__title {
             @include H6-pageheader-text-style;
@@ -115,30 +119,6 @@
         }
     }
 
-    // &__actions {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: left;
-    //     padding: 2rem 0;
-    //     @include P3-buttons-text-style;
-    //     padding-left: 2rem;
-    //     z-index: 1000;
-        
     
-    //     &__button {
-    //        @include button-styling;
-    //        color: $white;
-    
-    //       &:hover {
-    //         background-color: $blue-button-hover; 
-    //       }
-    //     }
-    
-    //     &__icon {
-    //         margin-left: 0.5rem;
-    //         transition: margin-left 0.3s ease;
-    //       }
-    //   }
-  
   }
   

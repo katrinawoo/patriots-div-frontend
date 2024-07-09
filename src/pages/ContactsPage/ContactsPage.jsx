@@ -1,6 +1,6 @@
 import "./ContactsPage.scss";
 import React from "react";
-import HeroContacts from "../../components/HeroContacts/HeroTeam";
+import HeroContacts from "../../components/HeroContacts/HeroContacts";
 
 const ContactsPage = () => {
   return (
