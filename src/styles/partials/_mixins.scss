@@ -91,13 +91,13 @@
     color: $black-header;
     text-transform: uppercase;
     // Apply the drop shadow using the variable
-    box-shadow: 0 0.18rem 3.3675rem rgba(red($white), green($white), blue($white), 0.5); // 0px 2.89px 53.88px 50% opacity
+    text-shadow: 0 0.18rem 3.3675rem rgba(red($white), green($white), blue($white), 0.5); // 0px 2.89px 53.88px 50% opacity
     
     @include tablet-breakpoint() {
         font-size: 8.4rem; //134.39px
         line-height: 6.72rem; //107.51px
         // Apply the drop shadow using the variable
-        box-shadow: 0 0.25rem 4.66rem rgba(red($white), green($white), blue($white), 0.5); // 0px 4px 74.6px 50% opacity
+        text-shadow: 0 0.25rem 4.66rem rgba(red($white), green($white), blue($white), 0.5); // 0px 4px 74.6px 50% opacity
         }
   }
 
@@ -159,10 +159,12 @@
     font-weight: 400;
     color: $white;
     text-transform: uppercase;
+    text-shadow: 0 2.33px 43.4px rgba(255, 255, 255, 0.5);
     
     @include tablet-breakpoint() {
         font-size: 10rem; //160.31px
         line-height: 8.02rem; //128.25px
+        text-shadow: 0 4px 74.6px rgba(255, 255, 255, 0.5);
         }
   }
 

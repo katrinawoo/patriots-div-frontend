@@ -8,7 +8,6 @@ const HeroGames = () => {
   return (
     <section className="hero-games">
       <div className="hero-games__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
-      <div className="hero-games__overlay"></div>
       <div className="hero-games__wrapper">
         <img src={girlImage} alt="Hero Girl" className="hero-games__girl-img" />
         <div className="hero-games__content">
