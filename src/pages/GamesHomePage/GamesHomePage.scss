@@ -10,15 +10,18 @@
     flex-direction: column;
     padding: $m-padding-sides;
     width: 100%;
+    margin-top: -20rem;
 
     @include tablet-breakpoint {
         align-items: center;
         padding: 1.5rem 2rem;
+        margin-top: -10rem;
     }
 
     @include desktop-breakpoint {
       padding: 2rem 0 0 0;
       @include desktop-margins;
+      margin-top: -18rem;
     }
 
     
@@ -175,4 +178,34 @@
         
     }
   }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem 0;
+    @include P3-buttons-text-style;
+
+    &__button {
+       @include button-styling;
+
+      &:hover {
+        background-color: $blue-button-hover; 
+      }
+
+      &--game {
+        margin-left: -2rem;
+      }
+    }
+
+    &__icon {
+        margin-left: 0.5rem;
+        transition: margin-left 0.3s ease;
+      }
+  }
+}
+
+.footer-logo {
+        margin-left: -63rem;
+        margin-top: -47rem;
 }

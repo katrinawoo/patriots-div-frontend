@@ -3,20 +3,31 @@
 // import Search from "../../components/Search/Search.jsx";
 // import Button from "../../components/Button/Button.jsx";
 // import React from "react";
+import { Link } from "react-router-dom";
 import icon11 from "../../assets/icons/Icon-hover-1.1.png";
 import icon12 from "../../assets/icons/Icon-hover-1.2.png";
 import icon21 from "../../assets/icons/Icon-hover-2.1.png";
 import icon2213 from "../../assets/icons/Icon-hover-2.2-1.3.png";
 import icon3122 from "../../assets/icons/Icon-hover-3.1-2.2.png";
 import icon3223 from "../../assets/icons/Icon-hover-3.2-2.3.png";
+import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import "./GamesHomePage.scss";
+import FooterLogo from "../../components/FooterLogo/FooterLogo";
+import HeroGames from "../../components/HeroGames/HeroGames";
 
 export default function GamesHomePage() {
 
     
   return (
     <main className="games-home-page">
+        <HeroGames />
         <div className="games-home-page__wrapper">  
+            <section className="games-home-page__actions">
+                <a className="games-home-page__actions__button games-home-page__actions__button--game" href="https://www.shadowwar.com" target="_blank" rel="noopener noreferrer">
+                    More about the game <img src={arrowIcon} alt="Right Arrow" className="hero-games__actions__icon" />
+                </a>
+                <div></div>
+            </section>
             <section className="games-home-page__header">
 
                
@@ -36,11 +47,7 @@ export default function GamesHomePage() {
                 <div className="games-home-page__header__about">
                     <p>Patriots Division is a game development company focused on creating next-generation digital experiences. Our studio is globally distributed, composed of creatives from all regions, industries, and backgrounds, with a shared experience in game development and passion for innovation.</p>
                 </div>
-                
-                <div className="games-home-page__actions">
-                {/* <Search />
-                <Button text="+ Add New Warehouse" action={addWarehouseHandler} /> */}
-                </div>
+            
             </section>
 
             <section className="games-home-page__content">
@@ -194,7 +201,18 @@ export default function GamesHomePage() {
                     </article>
                 </div>
             </section>
+
+            <section className="games-home-page__actions">
+                <Link className="games-home-page__actions__button" to="/careers">
+                  Check Open Positions <img src={arrowIcon} alt="Right Arrow" className="games-home-page__actions__icon" />
+                </Link>
+                <div></div>
+            </section>
+
+            <FooterLogo className="games-home-page__footer" />
         </div>
+        
+        
         
 
       

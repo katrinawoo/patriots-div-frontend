@@ -1,0 +1,171 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.hero-games {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -8rem;
+    z-index: -3;
+
+    
+  
+    &__background {
+      background: url('../../assets/images/14-hero-background-image.png') no-repeat center center;
+      background-size: cover;
+      width: 100%;
+      height: 39rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%); // Adjust the percentage values to create the desired slant
+      filter: brightness(0.3); // Darken the background image
+      z-index: -2;
+      pointer-events: none; // Prevent background from intercepting clicks
+
+      @media (max-width: 768px) {
+        // transform: scale(1.2); // Zoom in for tablet screens
+        // right: -25%;
+        // height: 25rem;
+        // clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%); // Adjust the percentage values to create the desired slant
+      }
+  
+      @media (max-width: 480px) {
+        // transform: scale(1.5); // Zoom in more for mobile screens
+        // height: 30rem;
+        // right: 0;
+      }
+
+    }
+  
+    // &__overlay {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 70%;
+    //     background-color: rgba(69, 66, 66, 0.8); // Adjust the opacity as needed
+    //     pointer-events: none; // Allows clicks to pass through the overlay
+    //     clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%); // Adjust the percentage values to create the desired slant
+    // }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: $m-padding-sides;
+        width: 100%;
+        z-index: 1; // Ensure content is above background
+    
+
+        @include tablet-breakpoint {
+            align-items: center;
+            padding: 1.5rem 2rem;
+        }
+        
+        @include desktop-breakpoint {
+            padding: 2rem 0 0 0;
+            @include desktop-margins;
+          }
+    }
+
+    &__girl-img {
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        max-width: $desktop-width;
+        height: 32rem;
+        position: absolute;
+        right: 15%;
+        pointer-events: none; // Prevent background from intercepting clicks
+        // margin-top: 5rem;
+
+        @media (max-width: 768px) {
+            transform: scale(1.2); // Zoom in for tablet screens
+            right: -25%;
+            height: 32rem;
+          }
+      
+          @media (max-width: 480px) {
+            transform: scale(1.2); // Zoom in more for mobile screens
+            height: 20rem;
+            right: -15%;
+          }
+    }
+
+    &__content {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        width: 65%;
+        padding-left: 2rem;
+        padding-top: 6rem;
+
+        &__title {
+            @include H6-pageheader-text-style;
+    
+        }
+
+        &__box1 {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        &__banner {
+            width: 17rem;
+            text-align: center;
+        }
+
+
+        &__box2 {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            align-items: baseline;
+        }
+
+        &__logo {
+            width: 4.31rem;//69px
+            height: 3.17rem;//50.7px
+        }
+
+        &__text {
+            padding-top: 1rem;
+            @include P7-text-style;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding: 2rem 0;
+        @include P3-buttons-text-style;
+        padding-left: 2rem;
+        z-index: 1000;
+        
+    
+        &__button {
+           @include button-styling;
+           color: $white;
+    
+          &:hover {
+            background-color: $blue-button-hover; 
+          }
+        }
+    
+        &__icon {
+            margin-left: 0.5rem;
+            transition: margin-left 0.3s ease;
+          }
+      }
+  
+  }
+  

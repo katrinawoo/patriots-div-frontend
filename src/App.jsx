@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GamesHomePage from "../src/pages/GamesHomePage/GamesHomePage.jsx";
+import CareersPage from "./pages/CareersPage/CareersPage.jsx";
 // import WarehouseListPage from "../src/pages/WarehouseListPage/WarehouseListPage.jsx";
 // import WarehouseDetailsPage from "../src/pages/WarehouseDetailsPage/WarehouseDetailsPage.jsx";
 // import WarehouseFormPage from "../src/pages/WarehouseFormPage/WarehouseFormPage.jsx";
@@ -20,6 +21,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<GamesHomePage />} />
+          <Route path="/careers" element={<CareersPage />} />
           {/* <Route path="/warehouses" element={<WarehouseListPage />} />
           <Route
             path="/warehouses/:warehouseId"

@@ -96,7 +96,6 @@
     @include tablet-breakpoint() {
         font-size: 8.4rem; //134.39px
         line-height: 6.72rem; //107.51px
-        font-weight: 400;
         // Apply the drop shadow using the variable
         box-shadow: 0 0.25rem 4.66rem rgba(red($white), green($white), blue($white), 0.5); // 0px 4px 74.6px 50% opacity
         }
@@ -153,6 +152,21 @@
   }
 
 
+@mixin H6-pageheader-text-style {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 6.62rem; //105.89px
+    line-height: 5.29rem; //84.71px
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    
+    @include tablet-breakpoint() {
+        font-size: 10rem; //160.31px
+        line-height: 8.02rem; //128.25px
+        }
+  }
+
+
 // For About Us text
 @mixin P1-pageheader-text-style {
     font-size: 1.125rem; //18px
@@ -182,6 +196,20 @@
         }
   }
 
+// For Buttons text
+@mixin P3-buttons-text-style {
+    font-size: 1.06rem; //16.96px
+    line-height: 1.59rem; //25.45px
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: $white;
+    
+    @include tablet-breakpoint() {
+        font-size: 1.19rem; //19px
+        line-height: 1.78rem; //28.5px
+        }
+  }
+
 
   // For Nav Header Modal -- Footer
   @mixin P5-text-style {
@@ -202,6 +230,35 @@
   }
 
 
+  // For Hero text
+@mixin P7-text-style {
+    font-size: 1.1875rem; //19px
+    line-height: 2.1rem; //33.63px
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: $white;
+
+  }
+
+
+//BUTTONS STYLING
+@mixin button-styling {
+    background-color: $blue-button;
+    padding: 1.25rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 0.22rem 3.34rem 0 rgba(red(#8B70A680), green(#8B70A680), blue(#8B70A680), 0.5); //0 3.57px 53.39px 0 #8B70A680 50%
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include tablet-breakpoint(){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+//DIAGONAL LINE
 @mixin diagonal-line($width, $height, $color, $opacity) {
     content: '';
     position: absolute;
