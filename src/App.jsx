@@ -10,6 +10,7 @@ import JobDetailsPage from "./pages/JobDetailsPage/JobDetailsPage.jsx";
 // import InventoryPage from "../src/pages/InventoryPage/InventoryPage.jsx";
 // import ItemDetailsPage from "../src/pages/ItemDetailsPage/ItemDetailsPage.jsx";
 import Header from "../src/components/Header/Header.jsx";
+import Footer from "../src/components/Footer/Footer.jsx";
 // import Footer from "../src/components/Footer/Footer.jsx";
 // import EditWarehouse from "./pages/EditWarehouse/EditWarehouse.jsx";
 // import AddInventoryPage from "../src/pages/AddInventoryPage/AddInventoryPage.jsx";
@@ -47,7 +48,7 @@ function App() {
           <Route path="/inventory/new" element={<AddInventoryPage />} /> */}
         </Routes>
 
-          {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );

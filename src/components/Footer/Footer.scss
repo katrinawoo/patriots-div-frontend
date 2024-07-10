@@ -1,0 +1,100 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.footer {
+  background-color: $black-background; // use black background until footer applied
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-padding-sides;
+    width: 100%;
+    
+
+    @include tablet-breakpoint {
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
+
+    @include desktop-breakpoint {
+      padding: 2rem 0 0 0;
+      @include desktop-margins;
+    }
+
+    
+  }
+
+&__logo {
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+
+  &__img {
+    height: 3.75rem; //60px
+    width: auto;
+
+    @include tablet-breakpoint {
+      height: 5.44rem; //87px
+      margin: 0 auto 0 0;
+    }
+  }
+}
+
+&__nav {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    @include H4-text-style;
+  }
+
+    &--mobile {
+        display: flex;
+        @include tablet-breakpoint {
+            display: none;
+        }
+    }
+
+    &--tablet {
+        display: none;
+        @include tablet-breakpoint {
+            display: flex;
+            gap: 4.625rem;  //74px
+        }
+
+        &--empty {
+            width: 5rem;
+        }
+    }
+
+    &__menu-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        padding-top: 0.5rem;
+    }
+
+  &__item {
+    position: relative;
+
+    &::after {
+        // @mixin diagonal-line($width, $height, $color, $opacity)
+        @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.2); //57px, 1.26px, $gray-line, 20%
+    }
+
+    &:hover {
+      font-size: 1rem;
+      transition: all 0.4s ease;
+      color: $white;
+    }
+}
+}
+}
+
+.active {
+  text-decoration: underline;
+  color: white;
+}
