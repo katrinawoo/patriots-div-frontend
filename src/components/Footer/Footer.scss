@@ -6,6 +6,7 @@
   background-color: $black-modal; // use black background until footer applied
   width: 100%;
   color: $white;
+  
 
   &__wrapper {
     display: flex;
@@ -15,16 +16,21 @@
     align-items: center;
     padding: $m-padding-sides;
     width: 100%;
+    padding-top: 2rem;
     
 
     @include tablet-breakpoint {
         align-items: center;
         padding: 1.5rem 2rem;
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
     }
 
     @include desktop-breakpoint {
-      padding: 2rem 0 0 0;
+      padding: 2rem 0 2rem 0;
       @include desktop-margins;
+      padding-bottom: 2rem;
     }
 
     
@@ -44,18 +50,27 @@
 &__logo {
   display: flex;
   justify-content: center;
-  width: 6.31rem; //101ox
-  height: auto;
+  width: 4.65rem;//74.44px
+    height: 4.38;//70.11px
 
-//   &__img {
-//     height: 3.75rem; //60px
-//     width: auto;
+  &--mobile{
+    width: 6.31rem; //101px
+    height: auto;
+    @include tablet-breakpoint{
+        display: none;
+    }
+  }
 
-//     @include tablet-breakpoint {
-//       height: 5.44rem; //87px
-//       margin: 0 auto 0 0;
-//     }
-//   }
+  &--tablet{
+    margin-right: 1rem;
+    width: 4.65rem;//74.44px
+    height: 4.38;//70.11px
+    display: none;
+
+    @include tablet-breakpoint {
+        display: flex;
+    }
+  }
 }
 
 &__links {
@@ -67,7 +82,7 @@ padding-bottom: 0.5rem;
         
         font-family: "Oxanium", sans-serif;
         @include H4-text-style;
-        padding: 2rem 1rem 0.5rem 0rem;
+        padding: 0.5rem 1rem 0.5rem 0rem;
         text-transform: uppercase;
         text-align: left;
         align-items: left;
@@ -121,6 +136,12 @@ padding-bottom: 0.5rem;
         }
     }
 
+    &--box{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
     &--name{
         @include P8-text-style;
         font-weight: 400;
@@ -135,6 +156,19 @@ padding-bottom: 0.5rem;
         letter-spacing: 0.02em;
         opacity: 30%;
         padding-top: 0.5rem;
+    }
+
+    &--mobile{
+        @include tablet-breakpoint{
+            display: none;
+        }
+    }
+
+    &--tablet{
+        display: none;
+        @include tablet-breakpoint{
+            display: flex;
+        }
     }
 }
 
