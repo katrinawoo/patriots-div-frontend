@@ -36,7 +36,7 @@ export default function GamesHomePage() {
                     <p>are our pillars</p>
                 </div>
                 
-                <h1 className="games-home-page__header__title">About Us</h1>
+                <p className="games-home-page__header__title">About Us</p>
                 
                 <div className="games-home-page__header__about">
                     <p>Patriots Division is a game development company focused on creating next-generation digital experiences. Our studio is globally distributed, composed of creatives from all regions, industries, and backgrounds, with a shared experience in game development and passion for innovation.</p>

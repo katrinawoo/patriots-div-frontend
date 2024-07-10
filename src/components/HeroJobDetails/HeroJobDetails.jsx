@@ -17,8 +17,10 @@ const HeroJobDetails = () => {
                     <div>Level: Senior</div>
                     <div className='hero-job-details__content__text--tablet'>|  </div>
                     <div className='hero-job-details__content__text--tablet'>Compensation: 100k - 110k per year</div>
-                    <div className='hero-job-details__content__text--mobile'>Compensation:</div>
-                    <div className='hero-job-details__content__text--mobile'>100k - 110k per year</div>
+                    <div className='hero-job-details__content__text--mobile hero-job-details__content__text__box'>
+                        <div className='hero-job-details__content__text--mobile'>Compensation:</div>
+                        <div className='hero-job-details__content__text--mobile'>100k - 110k per year</div>
+                    </div>
                 </div>
             </article>   
         </div>

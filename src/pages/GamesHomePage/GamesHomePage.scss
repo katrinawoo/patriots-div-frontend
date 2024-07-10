@@ -78,6 +78,11 @@
         padding: 2rem 0;
         @include P1-pageheader-text-style;
     }
+
+    &__title {
+        @include H1-pageheader-text-style;
+        color: $black-header;
+    }
   }
 
   &__content {
