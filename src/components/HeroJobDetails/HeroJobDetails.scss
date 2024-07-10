@@ -16,7 +16,7 @@
       background: url('../../assets/images/12-hero-careers-background.png') no-repeat center center;
       background-size: cover;
       width: 100%;
-      height: 48rem;
+      height: 50rem;
       position: absolute;
       top: 0;
       left: 0;
@@ -26,9 +26,18 @@
       pointer-events: none; // Prevent background from intercepting clicks
 
       @include tablet-breakpoint {
-        height: 43rem;
+        transition: all 0.8s ease;
+        height: 54rem;
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // Adjust the percentage values to create the desired slant
-      }
+        
+        
+    }
+    @include desktop-breakpoint {
+        transition: all 0.4s ease;
+        height: 45rem;
+    }
+
+
     }
 
     &__wrapper {
@@ -58,7 +67,7 @@
         display: flex;
         flex-direction: column;
         color: $white;
-        width: 65%;
+        width: 80%;
         padding-left: 2rem;
         padding-top: 6rem;
         align-items: center;

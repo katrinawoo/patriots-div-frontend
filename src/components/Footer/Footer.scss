@@ -130,6 +130,10 @@ padding-bottom: 0.5rem;
     padding-bottom: 1rem;
     gap: 4rem;
 
+    @include tablet-breakpoint{
+        gap: 2rem;
+    }
+
     &--socials{
         &:hover{
             background-color: white;
