@@ -88,7 +88,7 @@
     line-height: 3.75rem; //60.05px
     font-weight: 400;
     letter-spacing: $letter-spacing;
-    color: $black-header;
+    color: $white;
     text-transform: uppercase;
     // Apply the drop shadow using the variable
     text-shadow: 0 0.18rem 3.3675rem rgba(red($white), green($white), blue($white), 0.5); // 0px 2.89px 53.88px 50% opacity
@@ -168,6 +168,38 @@
         }
   }
 
+@mixin H7-pageheader-text-style {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 5.83rem; //93.27px
+    line-height: 4.66rem; //74.62px
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    text-shadow: 0 2.33px 43.4px rgba(255, 255, 255, 0.5);
+    
+    @include tablet-breakpoint() {
+        font-size: 10rem; //160.31px
+        line-height: 8.02rem; //128.25px
+        text-shadow: 0 4px 74.6px rgba(255, 255, 255, 0.5);
+        }
+  }
+
+
+@mixin H8-pageheader-text-style {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.69rem; //59.06px
+    line-height: 2.95rem; //47.25px
+    font-weight: 400;
+    color: $black-header;
+    text-transform: uppercase;
+    text-shadow: 0 2.89px 53.88px rgba(255, 255, 255, 0.5);
+    
+    @include tablet-breakpoint() {
+        font-size: 5.77rem; //92.39px
+        line-height: 4.62rem; //73.91px
+        text-shadow: 0 4px 74.6px rgba(255, 255, 255, 0.5);
+        }
+  }
 
 // For About Us text
 @mixin P1-pageheader-text-style {
@@ -249,6 +281,16 @@
     font-weight: 600;
     letter-spacing: 0.2em;
     color: rgba(red($white), green($white), blue($white), 0.6);
+  }
+
+// For Careers page
+@mixin P9-text-style {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.25rem; //20px
+    line-height: 2.05rem; //32.8px
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: rgba(red($blue-text), green($blue-text), blue($blue-text), 0.9);
   }
 
 
