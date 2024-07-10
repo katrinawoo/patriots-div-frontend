@@ -5,11 +5,14 @@
 .footer {
   background-color: $black-modal; // use black background until footer applied
   width: 100%;
+  color: $white;
 
   &__wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
     padding: $m-padding-sides;
     width: 100%;
     
@@ -27,74 +30,112 @@
     
   }
 
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: left;
+    text-align: left;
+    width: 80%;
+    max-width: 280px;//keeps from spreading in mobile view
+    padding-bottom: 2rem;
+  }
+
 &__logo {
   display: flex;
   justify-content: center;
   width: 5rem;
 
-  &__img {
-    height: 3.75rem; //60px
-    width: auto;
+//   &__img {
+//     height: 3.75rem; //60px
+//     width: auto;
 
-    @include tablet-breakpoint {
-      height: 5.44rem; //87px
-      margin: 0 auto 0 0;
-    }
-  }
+//     @include tablet-breakpoint {
+//       height: 5.44rem; //87px
+//       margin: 0 auto 0 0;
+//     }
+//   }
 }
 
-&__nav {
-  display: flex;
-  justify-content: center;
+&__links {
+padding-left: 1rem;
+padding-bottom: 0.5rem;
 
-  &__item {
-    @include H4-text-style;
-  }
 
-    &--mobile {
-        display: flex;
-        @include tablet-breakpoint {
-            display: none;
+    &__title{
+        
+        font-family: "Oxanium", sans-serif;
+        @include H4-text-style;
+        padding: 2rem 1rem 0.5rem 0rem;
+        text-transform: uppercase;
+        text-align: left;
+        align-items: left;
+        color: $white;
+        opacity: 0.8;
+
+        &--sites {
+            
+            font-family: "Sulphur Point", sans-serif;
+            @include P8-text-style;
+            opacity: 0.6;
+
+            &:hover{
+                // font-size: 1rem;
+                color: $white;
+            }
+        }
+    }
+    
+
+    &__column {
+        width: 50%; // Adjust width as needed
+        //padding: 1rem;
+        position: relative;
+    
+        &:nth-child(2) { // Assuming the middle column needs the border
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            margin-left: -1rem;
+            // padding-left: 1rem;
+            width: 1px; // Border width
+            background-color: rgba(255, 255, 255, 0.15); // Border color with 15% opacity
+          }
+        }
+      }
+}
+
+&__media{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 4rem;
+
+    &--socials{
+        &:hover{
+            background-color: white;
         }
     }
 
-    &--tablet {
-        display: none;
-        @include tablet-breakpoint {
-            display: flex;
-            gap: 4.625rem;  //74px
-        }
-
-        &--empty {
-            width: 5rem;
-        }
+    &--name{
+        @include P8-text-style;
+        font-weight: 400;
+        color: $white;
+        letter-spacing: 0.02em;
     }
 
-    &__menu-icon {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
+    &--tagline{
+        @include P8-text-style;
+        font-weight: 400;
+        color: $white;
+        letter-spacing: 0.02em;
+        opacity: 30%;
         padding-top: 0.5rem;
     }
-
-  &__item {
-    position: relative;
-
-    &::after {
-        // @mixin diagonal-line($width, $height, $color, $opacity)
-        @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.2); //57px, 1.26px, $gray-line, 20%
-    }
-
-    &:hover {
-      font-size: 1rem;
-      transition: all 0.4s ease;
-      color: $white;
-    }
-}
-}
 }
 
-.active {
-  text-decoration: underline;
-  color: white;
 }

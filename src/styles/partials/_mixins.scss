@@ -242,6 +242,15 @@
 
   }
 
+// For Footer component
+@mixin P8-text-style {
+    font-size: 0.79rem; //12px
+    line-height: 1rem; //18px
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: rgba(red($white), green($white), blue($white), 0.6);
+  }
+
 
 //BUTTONS STYLING
 @mixin button-styling {
