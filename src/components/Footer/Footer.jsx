@@ -2,8 +2,11 @@
 import { Link } from "react-router-dom";
 // import { NavLink, Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo/138-PD-logo.png";
+import linkedinIcon from "../../assets/icons/icons8-linkedin-24.png";
+import twitterIcon from "../../assets/icons/icons8-twitter-24.png";
 // import menuIcon from "../../assets/icons/1193-nav-menu-icon.png";
 import "./Footer.scss";
+import { ssrImportKey } from "vite/runtime";
 
 export default function Footer() {
   
@@ -49,10 +52,24 @@ export default function Footer() {
         </article>
 
         <article className="footer__media">
-            <div className="footer__logo">
-            <Link to="/">
-                <img className="footer__logo__img" src={logo} alt="patriots division logo" />
-            </Link>
+            <div className="footer__media--socials">
+                <Link to="https://twitter.com/PatriotsPMC">
+                    <img className="footer__logo__icon" src={twitterIcon} alt="Twitter Icon" />
+                </Link>
+            </div>
+
+            <div className="footer__media--socials">
+                <Link to="https://www.linkedin.com/company/patriots-division/">
+                    <img className="footer__logo__icon" src={linkedinIcon} alt="LinkedIn Icon" />
+                </Link>
+            </div>
+
+            <div className="footer__media--name">
+                <p>Patriots Division - 2024</p>
+            </div>
+
+            <div className="footer__media--tagline">
+                <p>Break - Surveillance - 20XX</p>
             </div>
         </article>
         {/* <div className="footer__logo">
