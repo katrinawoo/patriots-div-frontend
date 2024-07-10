@@ -293,6 +293,18 @@
     color: rgba(red($blue-text), green($blue-text), blue($blue-text), 0.9);
   }
 
+// For Careers Job Details page
+@mixin P10-text-style {
+    font-family: "Oxanium", sans-serif;
+    font-size: 1.25rem; //13.74px
+    line-height: 2.05rem; //31.18px
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    color: $white;
+    text-transform: uppercase;
+
+  }
+
 
 //BUTTONS STYLING
 @mixin button-styling {

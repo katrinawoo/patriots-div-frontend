@@ -11,12 +11,14 @@ const HeroJobDetails = () => {
             <div className='hero-job-details__content__box1'>
                 <img src={bannerGlow} alt="Shadow War Banner Glow" className="hero-job-details__content__banner-glow" />
             </div>
-            <article>
+            <article className='hero-job-details__content__box2'>
                 <div className='hero-job-details__content__title'>CONCEPT ARTIST</div>
-                <div className='hero-job-details__content__details'>
+                <div className='hero-job-details__content__text'>
                     <div>Level: Senior</div>
-                    <div>|</div>
-                    <div>Compensation: 100k - 110k per year</div>
+                    <div className='hero-job-details__content__text--tablet'>|  </div>
+                    <div className='hero-job-details__content__text--tablet'>Compensation: 100k - 110k per year</div>
+                    <div className='hero-job-details__content__text--mobile'>Compensation:</div>
+                    <div className='hero-job-details__content__text--mobile'>100k - 110k per year</div>
                 </div>
             </article>   
         </div>
