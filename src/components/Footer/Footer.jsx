@@ -52,15 +52,18 @@ export default function Footer() {
 
         <article className="footer__media">
             <div className="footer__media--socials">
-                <Link to="https://twitter.com/PatriotsPMC">
-                    <img className="footer__media__icon" src={twitterIcon} alt="Twitter Icon" />
-                </Link>
+                <a href="https://twitter.com/PatriotsPMC" target="_blank" rel="noopener" title="Visit Twitter">
+                    <img src={twitterIcon} alt="twitter" class="footer__media__icon"/>
+                </a>
             </div>
 
             <div className="footer__media--socials">
-                <Link to="https://www.linkedin.com/company/patriots-division/">
+                {/* <Link to="https://www.linkedin.com/company/patriots-division/">
                     <img className="footer__media__icon" src={linkedinIcon} alt="LinkedIn Icon" />
-                </Link>
+                </Link> */}
+                <a href="https://www.linkedin.com/company/patriots-division/" target="_blank" rel="noopener" title="Visit LinkedIn">
+                    <img src={linkedinIcon} alt="linkedIn" class="footer__media__icon"/>
+                </a>
             </div>
         </article>
 

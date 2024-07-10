@@ -44,7 +44,8 @@
 &__logo {
   display: flex;
   justify-content: center;
-  width: 5rem;
+  width: 6.31rem; //101ox
+  height: auto;
 
 //   &__img {
 //     height: 3.75rem; //60px
@@ -89,7 +90,6 @@ padding-bottom: 0.5rem;
 
     &__column {
         width: 50%; // Adjust width as needed
-        //padding: 1rem;
         position: relative;
     
         &:nth-child(2) { // Assuming the middle column needs the border
