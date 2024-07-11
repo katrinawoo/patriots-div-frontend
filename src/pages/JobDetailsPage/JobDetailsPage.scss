@@ -54,6 +54,33 @@
     &__text{
         @include P9-text-style;
     }
+
+    &__list {
+      @include P9-text-style;
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+      list-style: none;//remove default bullet points
+
+      & > li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 1.5rem; /* Add space for custom bullet */
+
+        &::before {
+            content: '\25C6'; /* Unicode for black diamond */
+            position: absolute;
+            left: 0;
+            color: $blue-text; /* Adjust this to your primary color */
+        }
+    }
+  }
+    &__paragraph{
+      @include P9-text-style;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
   }
 
 
