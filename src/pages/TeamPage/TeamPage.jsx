@@ -8,6 +8,7 @@
 // import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import "./TeamPage.scss";
 import HeroTeam from "../../components/HeroTeam/HeroTeam";
+import TeamBiosFull from "../../components/TeamBiosFull/TeamBiosFull";
 // import FooterLogo from "../../components/FooterLogo/FooterLogo";
 // import HeroGames from "../../components/HeroGames/HeroGames";
 
@@ -22,6 +23,7 @@ export default function TeamPage() {
         </div> */}
 
         <HeroTeam />
+        <TeamBiosFull />
 {/*         
         
         <div className="team-page__wrapper">  
