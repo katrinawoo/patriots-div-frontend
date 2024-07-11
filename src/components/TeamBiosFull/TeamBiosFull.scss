@@ -18,190 +18,108 @@
 
     @include tablet-breakpoint {
         align-items: center;
-        padding: 1.5rem 2rem;
+        padding: 2rem;
         margin-top: -4rem;
     }
 
     @include desktop-breakpoint {
-      padding: 2rem 0 0 0;
+      padding: 2rem 0 2rem 0;
       @include desktop-margins;
     }
-
-    
   }
 
-//   &__header {
-//     align-items: center;
-//     justify-content: center;
-//     text-align: center;
-
-//     @include tablet-breakpoint {
-//         max-width: 872px;
-//         padding: $t-padding-sides 2rem;
-//     }
-
-//     &__tagline {
-//         @include H2-pageheader-text-style;
-//         padding-bottom: $min-spacing;
-//     }
-    
-//     &__title {
-//         @include H1-pageheader-text-style;
-//         color: $black-header;
-//     }
-
-
-//     &__about {
-//         padding: 1rem 0;
-//         @include P1-pageheader-text-style;
-//         color: $blue-text;
-//     }
-//   }
-
-//   &__subheader{
-//     display: flex;
-//     flex-direction: column;
-//     gap: 1rem;
-//     align-items: center;
-//     text-align: center;
-//     gap: 3rem;
-
-//     @include tablet-breakpoint {
-//         flex-direction: row;
-//         // justify-content: flex-start;
-//         align-items: flex-start;
-//     }
-    
-//     &__title{
-//         @include H8-pageheader-text-style;
-//         padding-bottom: 1rem;
-//     }
-
-//     &__text{
-//         @include P9-text-style;
-//     }
-//   }
-
-//   &__content {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center; // Center align items horizontally
-//     // justify-content: center; // Center align items vertically
-//     // gap: 1rem;
-
-//     @include tablet-breakpoint {
-//         max-width: 872px;
-//     }
-
-//     &__wrapper{
-//         display: flex;
-//         flex-direction: row;
-//         gap: 1rem;
-//     }
-
-//     &__square {
-//         background-color: $black-background;
-//         color: $white;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         text-align: center;
-//         padding: 1.5rem 1rem 1.5rem 1rem; // Add padding to center content within the square
-//         gap: 1rem;
-//         width: calc(50% - 0.5rem);
-
-//         &-2213--tablet, &-3122--tablet, &-3223--tablet {
-//             display: none;
-//             @include tablet-breakpoint {
-//                 display: flex;
-//             }
-//         }
-
-//         &-2213--mobile, &-3223--mobile, &-3122--mobile{
-//             @include tablet-breakpoint {
-//                 display: none;
-//             }
-//         }
-//     }
-
-//     &__icon {
-//         text-align: center;
-//         height: 6.46rem; //103.33px
-//         width: 6.46rem;
-//     }
-
-//     &__title-container{
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//         align-items: center;//center vertically
-//         @include H3-pageheader-text-style;
-
-//     }
-
-//     &__bracket {
-//         opacity: 20%;
-//         font-size: 2rem;
-//         font-weight: 300;
-
-//         &-left{
-//             padding-left: 1.5rem;
-//         }
-
-//         &-right{
-//             padding-right: 1.5rem;
-//         }
-//     }
-
-//     &__title {
-//         @include H3-pageheader-text-style;
-//         position: relative;
-
-//         &::after {
-//             // @mixin diagonal-line($width, $height, $color, $opacity)
-//             @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.3); //57px, 1.26px, $gray-line, 20% (upped to 30%)
-//             z-index: 10;
-//         }
-
-//         &--rotate45{
-//             &::after {
-//             transform: translate(-50%, -50%) rotate(45deg);
-//         }
-//         }
-//     }
-
-
-
-//     &__text {
-//         @include P2-pageheader-text-style;
-//         opacity: 40%;
-//     }
-//   }
-
-//   &__actions {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     padding: 2rem 0;
-//     @include P3-buttons-text-style;
-
-//     &__button {
-//        @include button-styling;
-
-//       &:hover {
-//         background-color: $blue-button-hover; 
-//       }
-
-//     }
-
-//     &__icon {
-//         margin-left: 0.5rem;
-//         transition: margin-left 0.3s ease;
-//       }
-//   }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
 }
 
-// .footer-logo {
-//         margin-left: -63rem;
-//         margin-top: -47rem;
-// }
+
+
+.team-bio {
+    background: $black-team;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20rem; //320px
+    color: #FFFFFF;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 2.5rem;
+
+    &__image {
+        width: 100%;
+        height: 11.25rem;
+        object-fit: cover;
+
+    }
+
+    &__info {
+        margin-top: -3rem;
+        padding: 1rem;
+    }
+
+    &__name {
+        @include H9-pageheader-text-style;
+        margin: 0;
+    }
+
+    &__surname {
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+
+    &__role {
+        font-size: 1rem;
+        color: #15191C;
+        background: #FFFFFF;
+        padding: 1rem 1rem;
+        position: absolute; /* Position absolutely within the parent .team-bio */
+        bottom: -10px; /* Adjust this value to position the box */
+        left: -10px; /* Adjust this value to position the box */
+        margin: 0;
+        z-index: 20;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); // Adjust the percentage values to create the desired slant
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__linkedin {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.75rem;
+        z-index: 30;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &:hover{
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    &__bio {
+        font-size: 0.875rem;
+        color: #BBBBBB;
+        margin: 0;
+    }
+}
+
+.footer-logo {
+        margin-left: -63rem;
+        margin-top: -47rem;
+}

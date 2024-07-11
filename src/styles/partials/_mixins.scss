@@ -201,6 +201,16 @@
         }
   }
 
+
+@mixin H9-pageheader-text-style {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 6.67rem; //106.76px
+    line-height: 5.34rem; //84.71px
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+  }
+
 // For About Us text
 @mixin P1-pageheader-text-style {
     font-size: 1.125rem; //18px
