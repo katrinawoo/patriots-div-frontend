@@ -100,6 +100,18 @@ const CareersPage = () => {
             
             </section>
 
+            <div className="careers-page__video">
+                <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/49kSRR1um2w?si=2NQ6JZ9pc0G3mScX"
+                title="Careers Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                ></iframe>
+            </div>
+
             <FooterLogo className="careers-page__footer" />
         </div>
     </main>

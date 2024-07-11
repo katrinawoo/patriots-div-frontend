@@ -229,9 +229,18 @@
     }
   }
 
+  &__video {
+    padding: 2rem;
+    // display: flex;
+    // justify-content: center;
+    // margin: 2rem 0;
 
-
-
+    // iframe {
+    //   width: 100%;
+    // //   max-width: 560px;
+    // //   height: 315px;
+    // }
+  }
 
   &__actions {
     display: flex;
