@@ -2,7 +2,8 @@ import "./JobDetailsPage.scss";
 import React, { useState, useEffect } from "react";
 import HeroJobDetails from "../../components/HeroJobDetails/HeroJobDetails";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
-import { useParams } from "react-router-dom";
+import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
+import { Link, useParams } from "react-router-dom";
 import { fetchPositionById } from "../../api";
 
 const JobDetailsPage = () => {
@@ -76,6 +77,13 @@ const JobDetailsPage = () => {
                     </div>
                 </div>
             
+            </section>
+
+            <section className="job-details-page__actions">
+                <Link className="job-details-page__actions__button" to="/careers">
+                  Apply Now <img src={arrowIcon} alt="Right Arrow" className="job-details-page__actions__icon" />
+                </Link>
+                <div></div>
             </section>
 
 
