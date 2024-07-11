@@ -1,8 +1,38 @@
 import "./CareersPage.scss";
+import React, { useState, useEffect } from "react";
 import HeroCareers from "../../components/HeroCareers/HeroCareers";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
+import { fetchOpenPositions } from "../../api";
+import { Link } from "react-router-dom";
 
 const CareersPage = () => {
+  const [positions, setPositions] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const getPositions = async () => {
+      try {
+        const fetchedPositions = await fetchOpenPositions();
+        setPositions(fetchedPositions);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getPositions();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <main className="careers-page">
         <HeroCareers />
@@ -54,9 +84,20 @@ const CareersPage = () => {
                     <p>Currently Open</p>
                 </div>
                 <h1 className="careers-page__header__title">Positions</h1>
-                <div className="careers-page__header__about">
-                    <p>[INSERT OPEN POSITIONS]</p>
+                <div className="careers-page__positions">
+                  {positions.map((position) => (
+                    <div key={position.id} className="careers-page__position">
+                      <Link to={`/careers/${position.id}`}>
+                       <div className="careers-page__position-details">
+                        <h2>{position.title}</h2>
+                        <p>{position.location} - {position.capacity}</p>
+                        <p>{position.level}</p>
+                        <p>{position.compensation}</p>
+                    </div>
+                      </Link>
                 </div>
+            ))}
+          </div>
             
             </section>
 
