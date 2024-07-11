@@ -88,11 +88,10 @@ const CareersPage = () => {
                   {positions.map((position) => (
                     <div key={position.id} className="careers-page__position">
                       <Link to={`/careers/${position.id}`}>
-                       <div className="careers-page__position-details">
-                        <h2>{position.title}</h2>
-                        <p>{position.location} - {position.capacity}</p>
-                        <p>{position.level}</p>
-                        <p>{position.compensation}</p>
+                       <div className="careers-page__position--details">
+                        <div className="careers-page__position--location">{position.location} - {position.capacity}</div>
+                        <div className="careers-page__position--title">{position.level} {position.title}</div>
+                        <div className="careers-page__position--compensation">Salary: {position.compensation}</div>
                     </div>
                       </Link>
                 </div>

@@ -211,6 +211,20 @@
     text-transform: uppercase;
   }
 
+@mixin H10-pageheader-text-style {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.28rem; //52.47px
+    line-height: 2.89rem; //88%
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+
+    @include tablet-breakpoint(){
+      font-size: 3.86rem; //61.76px
+      line-height: 3.4rem; //88%
+    }
+  }
+
 // For About Us text
 @mixin P1-pageheader-text-style {
     font-size: 1.125rem; //18px
@@ -314,6 +328,22 @@
     text-transform: uppercase;
 
   }
+
+// For Careers Job Details page
+@mixin P11-text-style {
+  font-family: "Oxanium", sans-serif;
+  font-size: 1.25rem; //11.82px
+  line-height: 2.05rem; //227%
+  font-weight: 800;
+  letter-spacing: 0.6em;
+  color: $white;
+  text-transform: uppercase;
+
+  @include tablet-breakpoint(){
+    font-size: 1.25rem; //13.74px
+    line-height: 2.05rem; //31.18px
+  }
+}
 
 
 //BUTTONS STYLING

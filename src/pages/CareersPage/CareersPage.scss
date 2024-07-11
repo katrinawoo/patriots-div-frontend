@@ -46,6 +46,7 @@
     &__title {
         @include H1-pageheader-text-style;
         color: $black-header;
+        padding-bottom: 2rem;
     }
 
 
@@ -154,6 +155,7 @@
     &__title {
         @include H3-pageheader-text-style;
         position: relative;
+        
 
         &::after {
             // @mixin diagonal-line($width, $height, $color, $opacity)
@@ -175,6 +177,61 @@
         opacity: 40%;
     }
   }
+
+  &__positions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  &__position {
+    background: $black-team;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20rem;
+    color: #FFFFFF;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &--location {
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    &--title {
+        padding: 1rem;
+        @include H10-pageheader-text-style;
+        margin: 0;
+        color: #BBBBBB;
+    }
+
+    &--compensation{
+        font-size: 1rem;
+        font-weight: 700;
+        color: #15191C;
+        background: #FFFFFF;
+        padding: 1rem 1rem;
+        position: absolute; /* Position absolutely within the parent .team-bio */
+        bottom: -10px; /* Adjust this value to position the box */
+        left: -10px; /* Adjust this value to position the box */
+        margin: 0;
+        z-index: 20;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); // Adjust the percentage values to create the desired slant
+
+        & p {
+            margin: 0;
+        }
+    }
+  }
+
+
+
+
 
   &__actions {
     display: flex;
