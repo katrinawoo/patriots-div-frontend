@@ -5,30 +5,12 @@
 .hero-team {
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
-    margin-top: -16rem;
     z-index: -3;
+    padding-bottom: 6rem;
 
-    
-  
-    &__background {
-      background: url('../../assets/images/13-hero-team-background.png') no-repeat center center;
-      background-size: cover;
-      width: 100%;
-      height: 40rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // Adjust the percentage values to create the desired slant
-      filter: brightness(0.6); // Darken the background image
-      z-index: -2;
-      pointer-events: none; // Prevent background from intercepting clicks
-
-      @include tablet-breakpoint {
-        height: 42rem;
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // Adjust the percentage values to create the desired slant
-      }
+    @include desktop-breakpoint{
+        padding-bottom: 7rem;
     }
 
     &__wrapper {
@@ -38,7 +20,6 @@
         padding: $m-padding-sides;
         width: 100%;
         z-index: 1; // Ensure content is above background
-        margin-top: 10rem;
         text-align: center;
     
 
@@ -60,9 +41,9 @@
         display: flex;
         flex-direction: column;
         color: $white;
-        width: 65%;
+        width: 100%;
         padding-left: 2rem;
-        padding-top: 5rem;
+        padding-right: 2rem;
 
         &__title {
             @include H6-pageheader-text-style;
@@ -113,32 +94,6 @@
                 }
             }
         }
-    }
-
-    // &__actions {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: left;
-    //     padding: 2rem 0;
-    //     @include P3-buttons-text-style;
-    //     padding-left: 2rem;
-    //     z-index: 1000;
-        
-    
-    //     &__button {
-    //        @include button-styling;
-    //        color: $white;
-    
-    //       &:hover {
-    //         background-color: $blue-button-hover; 
-    //       }
-    //     }
-    
-    //     &__icon {
-    //         margin-left: 0.5rem;
-    //         transition: margin-left 0.3s ease;
-    //       }
-    //   }
-  
+    }  
   }
   

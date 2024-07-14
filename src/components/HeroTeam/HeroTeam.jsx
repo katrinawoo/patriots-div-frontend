@@ -1,11 +1,9 @@
 import './HeroTeam.scss';
 import bannerGlow from '../../assets/icons/26178-banner-glow.png';
-import heroTeamBackground from '../../assets/images/13-hero-team-background.png';
 
 const HeroTeam = () => {
   return (
     <section className="hero-team">
-      <div className="hero-team__background" style={{ backgroundImage: `url(${heroTeamBackground})` }}></div>
       <div className="hero-team__wrapper">
         <div className="hero-team__content">
             <div className='hero-team__content__box1'>
