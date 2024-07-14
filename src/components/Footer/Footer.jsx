@@ -22,7 +22,7 @@ export default function Footer() {
 
         
         <div className="footer__wrapper--tablet">
-        <div className="footer__media--box">
+            <div className="footer__media--box">
                 <div className="footer__media--name footer__media--tablet">
                         <p>Patriots Division - 2024</p>
                     </div>
