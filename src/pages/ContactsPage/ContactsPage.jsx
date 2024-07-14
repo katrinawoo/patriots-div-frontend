@@ -22,8 +22,8 @@ const ContactsPage = () => {
             </div>
             <h1 className="contacts-page__header__title">Connect with us</h1>
             <div className="contacts-page__header__about">
-                <p>You can contact the team at Patriots Division through socials,</p>
-                <p>or shoot us a message below.</p>
+                <p>You can contact the team at Patriots Division through socials, or shoot us a message below.</p>
+                {/* <p>or shoot us a message below.</p> */}
             </div>
           </section>
         <ContactsForm />

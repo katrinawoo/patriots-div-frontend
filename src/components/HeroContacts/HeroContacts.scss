@@ -6,24 +6,21 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    // margin-top: -16rem;
-
     z-index: -3;
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: $m-padding-sides;
+        padding: $m-padding-sides $m-padding-sides 0 $m-padding-sides;
         width: 100%;
         z-index: 1; // Ensure content is above background
-        // margin-top: 10rem;
         text-align: center;
     
 
         @include tablet-breakpoint {
             align-items: center;
-            padding: 1.5rem 2rem;
+            // padding: 1.5rem 2rem;
         }
         
         @include desktop-breakpoint {

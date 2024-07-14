@@ -1,11 +1,11 @@
 import './HeroCareers.scss';
 import bannerGlow from '../../assets/icons/26178-banner-glow.png';
-import heroCareersBackground from '../../assets/images/12-hero-careers-background.png';
+// import heroCareersBackground from '../../assets/images/12-hero-careers-background.png';
 
 const HeroCareers = () => {
   return (
     <section className="hero-careers">
-      <div className="hero-careers__background" style={{ backgroundImage: `url(${heroCareersBackground})` }}></div>
+      {/* <div className="hero-careers__background" style={{ backgroundImage: `url(${heroCareersBackground})` }}></div> */}
       <div className="hero-careers__wrapper">
         <div className="hero-careers__content">
             <div className='hero-careers__content__box1'>

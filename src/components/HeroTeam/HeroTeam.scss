@@ -7,17 +7,18 @@
     width: 100%;
     overflow: hidden;
     z-index: -3;
-    padding-bottom: 6rem;
+    padding-bottom: 3rem;
 
     @include desktop-breakpoint{
-        padding-bottom: 7rem;
+        padding-bottom: 5rem;
     }
 
     &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: $m-padding-sides;
+        padding-right: $m-padding-sides;
+        padding-left: $m-padding-sides;
         width: 100%;
         z-index: 1; // Ensure content is above background
         text-align: center;

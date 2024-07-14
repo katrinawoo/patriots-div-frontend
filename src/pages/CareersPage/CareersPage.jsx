@@ -1,9 +1,11 @@
 import "./CareersPage.scss";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HeroCareers from "../../components/HeroCareers/HeroCareers";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
 import { fetchOpenPositions } from "../../utils/api";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import heroBackground from "../../assets/images/12-hero-careers-background.png";
 
 const CareersPage = () => {
   const [positions, setPositions] = useState([]);
@@ -35,6 +37,8 @@ const CareersPage = () => {
 
   return (
     <main className="careers-page">
+        <div className="careers-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+        <Header />
         <HeroCareers />
         <div className="careers-page__wrapper">  
             
@@ -59,7 +63,6 @@ const CareersPage = () => {
                     
                     <div className="careers-page__subheader__text">
                         <p>We work remotely from all over the world - minimizing commuting and putting the focus on the task at hand.</p>
-                        <br></br>
                         <p>We believe in flexible schedules that improve the work-life balance.</p>
                     </div>
                 </div>
@@ -69,9 +72,7 @@ const CareersPage = () => {
                     
                     <div className="careers-page__subheader__text">
                         <p>The best way to make a great product is by giving its makers ownership - via equity and more.</p>
-                        <br></br>
                         <p>Performance is rewarded company-wide; whether you’re entry level or executive, bonuses apply.</p>
-                        <br></br>
                         <p>Time off is necessary to put out your best work - we schedule regular studio breaks for a little R&R.</p>
                     </div>
                 </div>
