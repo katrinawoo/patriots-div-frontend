@@ -8,15 +8,23 @@ import icon3223 from "../../assets/icons/Icon-hover-3.2-2.3.png";
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import "./GamesHomePage.scss";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
+import Header from "../../components/Header/Header";
 import HeroGames from "../../components/HeroGames/HeroGames";
+import heroBackground from "../../assets/images/14-hero-background-image.png";
+import girlImage from "../../assets/images/26047-hero-girl.png"
 
 export default function GamesHomePage() {
 
     
   return (
     <main className="games-home-page">
-        <HeroGames />
+        <div className="games-home-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+        <img src={girlImage} alt="Hero Girl" className="games-home-page__girl-img" />
+        <Header />
+        <div>
+        
         <div className="games-home-page__wrapper">  
+            <HeroGames />
             <section className="games-home-page__actions">
                 <a className="games-home-page__actions__button games-home-page__actions__button--game" href="https://www.shadowwar.com" target="_blank" rel="noopener noreferrer">
                     More about the game <img src={arrowIcon} alt="Right Arrow" className="hero-games__actions__icon" />
@@ -209,7 +217,7 @@ export default function GamesHomePage() {
         
         
 
-      
+        </div>
     </main>
 );
 }

@@ -9,7 +9,7 @@ import JobDetailsPage from "./pages/JobDetailsPage/JobDetailsPage.jsx";
 // import WarehouseFormPage from "../src/pages/WarehouseFormPage/WarehouseFormPage.jsx";
 // import InventoryPage from "../src/pages/InventoryPage/InventoryPage.jsx";
 // import ItemDetailsPage from "../src/pages/ItemDetailsPage/ItemDetailsPage.jsx";
-import Header from "../src/components/Header/Header.jsx";
+// import Header from "../src/components/Header/Header.jsx";
 import Footer from "../src/components/Footer/Footer.jsx";
 // import Footer from "../src/components/Footer/Footer.jsx";
 // import EditWarehouse from "./pages/EditWarehouse/EditWarehouse.jsx";
@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
 
         <Routes>
           <Route path="/" element={<GamesHomePage />} />
