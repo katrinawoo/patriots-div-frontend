@@ -45,7 +45,7 @@ const ContactsForm = () => {
   return (
     <div className="contacts-page__form__wrapper">
       <form className="contacts-page__form" onSubmit={handleSubmit}>
-        <div className="contacts-page__form--group">
+        <div className={`contacts-page__form--group ${errors.name ? 'error' : ''}`}>
           <label htmlFor="name"><h2>Name:</h2></label>
           <input
             type="text"
@@ -55,9 +55,9 @@ const ContactsForm = () => {
             onChange={(e) => setName(e.target.value)}
             placeholder="Your Name"
           />
-          {errors.name && <p className="error-message">{errors.name}</p>}
+          {errors.name && <p className="contacts-page__form__error-message">{errors.name}</p>}
         </div>
-        <div className="contacts-page__form--group">
+        <div className={`contacts-page__form--group ${errors.email ? 'error' : ''}`}>
           <label htmlFor="email"><h2>Email:</h2></label>
           <input
             type="email"
@@ -67,9 +67,9 @@ const ContactsForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your.email@example.com"
           />
-          {errors.email && <p className="error-message">{errors.email}</p>}
+          {errors.email && <p className="contacts-page__form__error-message">{errors.email}</p>}
         </div>
-        <div className="contacts-page__form--group">
+        <div className={`contacts-page__form--group ${errors.message ? 'error' : ''}`}>
           <label htmlFor="message"><h2>Message:</h2></label>
           <textarea
             id="message"
@@ -79,14 +79,14 @@ const ContactsForm = () => {
             placeholder="Your Message"
           />
           <p className="character-count">{MAX_MESSAGE_LENGTH - message.length} characters left</p>
-          {errors.message && <p className="error-message">{errors.message}</p>}
+          {errors.message && <p className="contacts-page__form__error-message">{errors.message}</p>}
         </div>
         <button type="submit" className="contacts-page__submit__button">
           Send Message <img src={arrowIcon} alt="Right Arrow" className="contacts-page__submit__icon" />
         </button>
       </form>
-      {successMessage && <p className="success-message">{successMessage}</p>}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {successMessage && <p className="contacts-page__form__success-message">{successMessage}</p>}
+      {errorMessage && <p className="contacts-page__form__error-message">{errorMessage}</p>}
     </div>
   );
 };

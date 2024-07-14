@@ -43,6 +43,11 @@
                 border-radius: 4px;
             }
 
+            &.error input,
+            &.error textarea {
+            border: 1px solid red;
+            }
+
             textarea {
                 height: 6rem;
             }
@@ -54,6 +59,12 @@
                 margin-top: 0.25rem;
               }
         }
+
+        &__error-message{
+            @include P8-text-style;
+            color: red;
+            text-align: left;
+          }
     }
 
 
