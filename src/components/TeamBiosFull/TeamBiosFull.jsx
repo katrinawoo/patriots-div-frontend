@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchTeamBios } from '../../api';
+import { fetchTeamBios } from '../../utils/api';
 import "./TeamBiosFull.scss";
 import linkedinIcon from "../../assets/icons/icons8-linkedin-24.png";
 

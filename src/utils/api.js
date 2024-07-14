@@ -31,3 +31,17 @@ export const fetchPositionById = async (id) => {
         throw error;
     }
 };
+
+export const sendContactMessage = async (name, email, message) => {
+    try {
+      const response = await axios.post(`${API_BASE_URL}/contact`, {
+        name,
+        email,
+        message
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Error sending contact message:', error);
+      throw error;
+    }
+  };

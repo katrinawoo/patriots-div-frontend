@@ -2,7 +2,7 @@ import "./CareersPage.scss";
 import React, { useState, useEffect } from "react";
 import HeroCareers from "../../components/HeroCareers/HeroCareers";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
-import { fetchOpenPositions } from "../../api";
+import { fetchOpenPositions } from "../../utils/api";
 import { Link } from "react-router-dom";
 
 const CareersPage = () => {

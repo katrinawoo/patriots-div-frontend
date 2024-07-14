@@ -4,7 +4,7 @@ import HeroJobDetails from "../../components/HeroJobDetails/HeroJobDetails";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import { Link, useParams } from "react-router-dom";
-import { fetchPositionById } from "../../api";
+import { fetchPositionById } from "../../utils/api";
 
 const JobDetailsPage = () => {
     const { id } = useParams();

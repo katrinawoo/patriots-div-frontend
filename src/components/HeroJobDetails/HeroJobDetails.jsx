@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import bannerGlow from '../../assets/icons/26178-banner-glow.png';
 import heroCareersBackground from '../../assets/images/12-hero-careers-background.png';
 import { useParams } from "react-router-dom";
-import { fetchPositionById } from '../../api';
+import { fetchPositionById } from '../../utils/api';
 
 
 const HeroJobDetails = () => {
