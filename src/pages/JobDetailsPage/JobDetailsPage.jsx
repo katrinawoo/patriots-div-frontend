@@ -1,10 +1,12 @@
 import "./JobDetailsPage.scss";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import HeroJobDetails from "../../components/HeroJobDetails/HeroJobDetails";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import { Link, useParams } from "react-router-dom";
 import { fetchPositionById } from "../../utils/api";
+import Header from "../../components/Header/Header";
+import heroBackground from "../../assets/images/12-hero-careers-background.png";
 
 const JobDetailsPage = () => {
     const { id } = useParams();
@@ -42,6 +44,8 @@ const JobDetailsPage = () => {
 
     return (
     <main>
+        <div className="job-details-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+        <Header />
         <HeroJobDetails />
 
         <div className="job-details-page__wrapper">  

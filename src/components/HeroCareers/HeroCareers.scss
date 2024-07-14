@@ -5,7 +5,6 @@
 .hero-careers {
     position: relative;
     width: 100%;
-    // height: 100vh;
     overflow: hidden;
     margin-top: -16rem;
     z-index: -3;
@@ -14,29 +13,6 @@
     @include tablet-breakpoint{
         padding-bottom: 0rem;
     }
-
-
-
-    
-  
-    // &__background {
-    //   background: url('../../assets/images/12-hero-careers-background.png') no-repeat center center;
-    //   background-size: cover;
-    //   width: 100%;
-    //   height: 40rem;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); // Adjust the percentage values to create the desired slant
-    //   filter: brightness(0.6); // Darken the background image
-    //   z-index: -2;
-    //   pointer-events: none; // Prevent background from intercepting clicks
-
-    //   @include tablet-breakpoint {
-    //     height: 42rem;
-    //     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); // Adjust the percentage values to create the desired slant
-    //   }
-    // }
 
     &__wrapper {
         display: flex;

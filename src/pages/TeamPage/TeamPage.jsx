@@ -29,7 +29,6 @@ export default function TeamPage() {
                 ></iframe>
             </div>
         </div>
-        <FooterLogo className="team-page__footer" />
     </main>
 );
 }
