@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import { sendContactMessage } from "../../utils/api";
 import contactUsValidator from "../../utils/contactUsValidator";
+import SuccessPopup from "../SuccessPopup/SuccessPopup";
 
 const MAX_MESSAGE_LENGTH = 1000;
 const ContactsForm = () => {
@@ -12,6 +13,7 @@ const ContactsForm = () => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ const ContactsForm = () => {
       setName('');
       setEmail('');
       setMessage('');
+      setShowPopup(true);
     } catch (error) {
       setErrorMessage('Failed mission to send message. Please try again.');
       setSuccessMessage('');
@@ -85,7 +88,7 @@ const ContactsForm = () => {
           Send Message <img src={arrowIcon} alt="Right Arrow" className="contacts-page__submit__icon" />
         </button>
       </form>
-      {successMessage && <p className="contacts-page__form__success-message">{successMessage}</p>}
+      {successMessage && <SuccessPopup show={showPopup} title={successMessage} text="" />}
       {errorMessage && <p className="contacts-page__form__error-message">{errorMessage}</p>}
     </div>
   );

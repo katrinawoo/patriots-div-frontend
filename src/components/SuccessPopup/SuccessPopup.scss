@@ -1,0 +1,9 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.swal2-popup {
+  font-family: 'Oxanium', sans-serif;
+  background-color: $black-background;
+  color: $white;
+}
