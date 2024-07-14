@@ -1,10 +1,4 @@
 import { Link } from "react-router-dom";
-// import icon11 from "../../assets/icons/Icon-hover-1.1.png";
-// import icon12 from "../../assets/icons/Icon-hover-1.2.png";
-// import icon21 from "../../assets/icons/Icon-hover-2.1.png";
-// import icon2213 from "../../assets/icons/Icon-hover-2.2-1.3.png";
-// import icon3122 from "../../assets/icons/Icon-hover-3.1-2.2.png";
-// import icon3223 from "../../assets/icons/Icon-hover-3.2-2.3.png";
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import "./GamesHomePage.scss";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";

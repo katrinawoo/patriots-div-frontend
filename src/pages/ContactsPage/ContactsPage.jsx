@@ -3,11 +3,16 @@ import React  from "react";
 import HeroContacts from "../../components/HeroContacts/HeroContacts";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
 import ContactsForm from "../../components/ContactsForm/ContactsForm";
+import Header from "../../components/Header/Header";
+import heroBackground from "../../assets/images/13-hero-team-background.png";
 
 const ContactsPage = () => {
   
   return (
     <main>
+        <div className="contacts-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+        <Header />
+        
         <HeroContacts />
         <div className="contacts-page__wrapper">
           
@@ -22,7 +27,7 @@ const ContactsPage = () => {
             </div>
           </section>
         <ContactsForm />
-        <FooterLogo className="games-home-page__footer" />
+        <FooterLogo className="contacts-page-page__footer" />
       </div>
     </main>
   );
