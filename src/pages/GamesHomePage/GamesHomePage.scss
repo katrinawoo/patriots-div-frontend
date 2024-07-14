@@ -129,101 +129,101 @@
     }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; // Center align items horizontally
-    justify-content: center; // Center align items vertically
-    gap: 1rem;
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center; // Center align items horizontally
+//     justify-content: center; // Center align items vertically
+//     gap: 1rem;
 
-    @include tablet-breakpoint {
-        max-width: 872px;
-    }
+//     @include tablet-breakpoint {
+//         max-width: 872px;
+//     }
 
-    &__wrapper{
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
+//     &__wrapper{
+//         display: flex;
+//         flex-direction: row;
+//         gap: 1rem;
+//     }
 
-    &__square {
-        background-color: $black-background;
-        color: $white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1.5rem 1rem 1.5rem 1rem; // Add padding to center content within the square
-        gap: 1rem;
-        width: calc(50% - 0.5rem);
+//     &__square {
+//         background-color: $black-background;
+//         color: $white;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         text-align: center;
+//         padding: 1.5rem 1rem 1.5rem 1rem; // Add padding to center content within the square
+//         gap: 1rem;
+//         width: calc(50% - 0.5rem);
 
-        &-2213--tablet, &-3122--tablet, &-3223--tablet {
-            display: none;
-            @include tablet-breakpoint {
-                display: flex;
-            }
-        }
+//         &-2213--tablet, &-3122--tablet, &-3223--tablet {
+//             display: none;
+//             @include tablet-breakpoint {
+//                 display: flex;
+//             }
+//         }
 
-        &-2213--mobile, &-3223--mobile, &-3122--mobile{
-            @include tablet-breakpoint {
-                display: none;
-            }
-        }
-    }
+//         &-2213--mobile, &-3223--mobile, &-3122--mobile{
+//             @include tablet-breakpoint {
+//                 display: none;
+//             }
+//         }
+//     }
 
-    &__icon {
-        text-align: center;
-        height: 6.46rem; //103.33px
-        width: 6.46rem;
-    }
+//     &__icon {
+//         text-align: center;
+//         height: 6.46rem; //103.33px
+//         width: 6.46rem;
+//     }
 
-    &__title-container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;//center vertically
-        @include H3-pageheader-text-style;
+//     &__title-container{
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;//center vertically
+//         @include H3-pageheader-text-style;
 
-    }
+//     }
 
-    &__bracket {
-        opacity: 20%;
-        font-size: 2rem;
-        font-weight: 300;
+//     &__bracket {
+//         opacity: 20%;
+//         font-size: 2rem;
+//         font-weight: 300;
 
-        &-left{
-            padding-left: 1.5rem;
-        }
+//         &-left{
+//             padding-left: 1.5rem;
+//         }
 
-        &-right{
-            padding-right: 1.5rem;
-        }
-    }
+//         &-right{
+//             padding-right: 1.5rem;
+//         }
+//     }
 
-    &__title {
-        @include H3-pageheader-text-style;
-        position: relative;
+//     &__title {
+//         @include H3-pageheader-text-style;
+//         position: relative;
 
-        &::after {
-            // @mixin diagonal-line($width, $height, $color, $opacity)
-            @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.3); //57px, 1.26px, $gray-line, 20% (upped to 30%)
-            z-index: 10;
-        }
+//         &::after {
+//             // @mixin diagonal-line($width, $height, $color, $opacity)
+//             @include diagonal-line(3.56rem, 0.08rem, $gray-line, 0.3); //57px, 1.26px, $gray-line, 20% (upped to 30%)
+//             z-index: 10;
+//         }
 
-        &--rotate45{
-            &::after {
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-        }
-    }
+//         &--rotate45{
+//             &::after {
+//             transform: translate(-50%, -50%) rotate(45deg);
+//         }
+//         }
+//     }
 
 
 
-    &__text {
-        @include P2-pageheader-text-style;
-        opacity: 40%;
-    }
-  }
+//     &__text {
+//         @include P2-pageheader-text-style;
+//         opacity: 40%;
+//     }
+//   }
 
   &__actions {
     display: flex;
