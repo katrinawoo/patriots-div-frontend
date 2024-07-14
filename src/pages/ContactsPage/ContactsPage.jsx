@@ -4,22 +4,34 @@ import HeroContacts from "../../components/HeroContacts/HeroContacts";
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import FooterLogo from "../../components/FooterLogo/FooterLogo";
 import { sendContactMessage } from "../../utils/api";
+import contactUsValidator from "../../utils/contactUsValidator";
 
 const ContactsPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationErrors = contactUsValidator({ name, email, message });
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
     try {
       await sendContactMessage(name, email, message);
       setSuccessMessage('Thanks Patriot, message sent successfully!');
       setErrorMessage('');
+      setErrors({});
+      setName('');
+      setEmail('');
+      setMessage('');
     } catch (error) {
-      setErrorMessage('Failed to send message. Please try again.');
+      setErrorMessage('Failed mission to send message. Please try again.');
       setSuccessMessage('');
     }
   };
@@ -55,8 +67,9 @@ const ContactsPage = () => {
                 name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                required
+                placeholder="Your Name"
               />
+              {errors.name && <p className="error-message">{errors.name}</p>}
             </div>
             <div className="contacts-page__form--group">
               <label htmlFor="email"><h2>Email:</h2></label>
@@ -66,8 +79,9 @@ const ContactsPage = () => {
                 name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
+                placeholder="your.email@example.com"
               />
+              {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
             <div className="contacts-page__form--group">
               <label htmlFor="message"><h2>Message:</h2></label>
@@ -76,8 +90,9 @@ const ContactsPage = () => {
                 name="message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                required
+                placeholder="Your Message"
               />
+              {errors.message && <p className="error-message">{errors.message}</p>}
             </div>
             <button type="submit" className="contacts-page__submit__button">
               Send Message <img src={arrowIcon} alt="Right Arrow" className="contacts-page__submit__icon" />
