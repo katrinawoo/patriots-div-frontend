@@ -41,6 +41,13 @@
                 padding: 0.5rem;
                 border: 1px solid $blue-text;
                 border-radius: 4px;
+
+                &::placeholder {
+                    @include P8-text-style;
+                    color: $gray-line-modal;
+                    font-family: "Sulphur Point", sans-serif;
+                    letter-spacing: 0.02em;
+                  }
             }
 
             &.error input,
