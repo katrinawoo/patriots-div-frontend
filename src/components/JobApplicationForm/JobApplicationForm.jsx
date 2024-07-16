@@ -1,6 +1,7 @@
-// JobApplicationForm.jsx
 import React, { useState } from 'react';
-import { uploadResume } from '../../utils/api';
+import { apply } from '../../utils/api';
+import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
+import "./JobApplicationForm.scss";
 
 const JobApplicationForm = ({ id }) => {
   const [name, setName] = useState('');
@@ -11,6 +12,10 @@ const JobApplicationForm = ({ id }) => {
   const [resume, setResume] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const handleResumeChange = (e) => {
+    setResume(e.target.files[0]);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,8 +28,13 @@ const JobApplicationForm = ({ id }) => {
     formData.append('information', information);
     formData.append('resume', resume);
 
+// Log FormData to verify its contents
+for (let pair of formData.entries()) {
+    console.log(pair[0] + ': ' + pair[1]);
+  }
+
     try {
-      await uploadResume(jobId, formData);
+      await apply(id, formData);
       setSuccessMessage('Application submitted successfully');
       setErrorMessage('');
       setName('');
@@ -40,46 +50,80 @@ const JobApplicationForm = ({ id }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="LinkedIn"
-        value={linkedin}
-        onChange={(e) => setLinkedin(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Links"
-        value={links}
-        onChange={(e) => setLinks(e.target.value)}
-      />
-      <textarea
-        placeholder="Information"
-        value={information}
-        onChange={(e) => setInformation(e.target.value)}
-      />
-      <input
-        type="file"
-        accept=".pdf"
-        onChange={(e) => setResume(e.target.files[0])}
-      />
-      <button type="submit">Submit</button>
-      {successMessage && <p>{successMessage}</p>}
-      {errorMessage && <p>{errorMessage}</p>}
+    <div className="job-application-form__wrapper">
+    <form className="job-application-form" onSubmit={handleSubmit}>
+      <div className="job-application-form__group">
+        <label htmlFor="name"><h2>Name:</h2></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Your Name"
+        />
+      </div>
+      <div className="job-application-form__group">
+        <label htmlFor="email"><h2>Email:</h2></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="your.email@example.com"
+        />
+      </div>
+      <div className="job-application-form__group">
+        <label htmlFor="linkedin"><h2>LinkedIn:</h2></label>
+        <input
+          type="text"
+          id="linkedin"
+          name="linkedin"
+          value={linkedin}
+          onChange={(e) => setLinkedin(e.target.value)}
+          placeholder="LinkedIn Profile URL"
+        />
+      </div>
+      <div className="job-application-form__group">
+        <label htmlFor="links"><h2>Other Links:</h2></label>
+        <input
+          type="text"
+          id="links"
+          name="links"
+          value={links}
+          onChange={(e) => setLinks(e.target.value)}
+          placeholder="Portfolio Links, Twitter Handle, etc.  Help us get to know you better!"
+        />
+      </div>
+      <div className="job-application-form__group">
+        <label htmlFor="information"><h2>Information:</h2></label>
+        <textarea
+          id="information"
+          name="information"
+          value={information}
+          onChange={(e) => setInformation(e.target.value)}
+          placeholder="Let us know why you think this role may be a good fit for you, or how your previous experience relates!"
+        />
+      </div>
+      <div className="job-application-form__group">
+        <label htmlFor="resume"><h2>Resume:</h2><div>Format of .pdf only, maximum size 5 MB.</div></label>
+        <input
+          type="file"
+          id="resume"
+          name="resume"
+          accept=".pdf"
+          onChange={handleResumeChange}
+        />
+      </div>
+      <button type="submit" className="job-application-form__submit__button">
+        Submit <img src={arrowIcon} alt="Right Arrow" className="job-application-form__submit__icon" />
+      </button>
+      {successMessage && <p className="job-application-form__success-message">{successMessage}</p>}
+      {errorMessage && <p className="job-application-form__error-message">{errorMessage}</p>}
     </form>
-  );
+  </div>
+);
 };
 
 export default JobApplicationForm;

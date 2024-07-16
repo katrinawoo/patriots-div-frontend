@@ -46,9 +46,9 @@ export const sendContactMessage = async (name, email, message) => {
     }
   };
 
-  export const uploadResume = async (id, formData) => {
+  export const apply = async (id, formData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/careers/${id}/uploadResume`, formData, {
+        const response = await axios.post(`${API_BASE_URL}/careers/${id}/apply`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

@@ -1,0 +1,91 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+
+.job-application-form__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .job-application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; // Center align items horizontally
+    gap: 1rem;
+    margin-right: 4rem;
+  
+    @include tablet-breakpoint {
+      max-width: 872px;
+      margin-right: -5rem;
+    }
+  
+    &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 80%;
+  
+      @include tablet-breakpoint {
+        width: 150%;
+      }
+  
+      label {
+        @include P2-pageheader-text-style;
+        color: $blue-text;
+        font-weight: 600;
+      }
+  
+      input,
+      textarea {
+        @include P8-text-style;
+        color: $blue-text;
+        letter-spacing: 0.02em;
+        font-weight: 400;
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid $blue-text;
+        border-radius: 4px;
+  
+        &::placeholder {
+          @include P8-text-style;
+          color: $gray-line-modal;
+          font-family: "Sulphur Point", sans-serif;
+          letter-spacing: 0.02em;
+        }
+      }
+  
+      textarea {
+        height: 6rem;
+      }
+    }
+  
+    &__error-message {
+      @include P8-text-style;
+      color: red;
+      text-align: left;
+    }
+  
+    &__submit {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 2rem 0;
+      color: $white;
+  
+      &__button {
+        @include button-styling;
+        @include P3-buttons-text-style;
+        color: $white;
+        margin-top: 0.5rem;
+  
+        &:hover {
+          background-color: $blue-button-hover;
+        }
+      }
+  
+      &__icon {
+        margin-left: 0.5rem;
+        transition: margin-left 0.3s ease;
+      }
+    }
+  }

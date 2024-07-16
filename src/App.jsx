@@ -4,24 +4,13 @@ import CareersPage from "./pages/CareersPage/CareersPage.jsx";
 import TeamPage from "./pages/TeamPage/TeamPage.jsx";
 import ContactsPage from "./pages/ContactsPage/ContactsPage.jsx";
 import JobDetailsPage from "./pages/JobDetailsPage/JobDetailsPage.jsx";
-// import WarehouseListPage from "../src/pages/WarehouseListPage/WarehouseListPage.jsx";
-// import WarehouseDetailsPage from "../src/pages/WarehouseDetailsPage/WarehouseDetailsPage.jsx";
-// import WarehouseFormPage from "../src/pages/WarehouseFormPage/WarehouseFormPage.jsx";
-// import InventoryPage from "../src/pages/InventoryPage/InventoryPage.jsx";
-// import ItemDetailsPage from "../src/pages/ItemDetailsPage/ItemDetailsPage.jsx";
-// import Header from "../src/components/Header/Header.jsx";
 import Footer from "../src/components/Footer/Footer.jsx";
-// import Footer from "../src/components/Footer/Footer.jsx";
-// import EditWarehouse from "./pages/EditWarehouse/EditWarehouse.jsx";
-// import AddInventoryPage from "../src/pages/AddInventoryPage/AddInventoryPage.jsx";
 import "./App.scss";
-// import EditInventoryPage from "./pages/EditInventoryPage/EditInventoryPage.jsx";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        {/* <Header /> */}
+      <BrowserRouter>\
 
         <Routes>
           <Route path="/" element={<GamesHomePage />} />
@@ -30,22 +19,6 @@ function App() {
           <Route path="/contacts" element={<ContactsPage />} />
           
           <Route path="/careers/:id" element={<JobDetailsPage />} />
-          
-          
-          {/* <Route path="/warehouses" element={<WarehouseListPage />} />
-          <Route
-            path="/warehouses/:warehouseId"
-            element={<WarehouseDetailsPage />}
-          />
-          <Route
-            path="/warehouses/:warehouseId/edit"
-            element={<EditWarehouse />}
-          />
-          <Route path="/warehouses/new" element={<WarehouseFormPage />} />
-          <Route path="/inventory" element={<InventoryPage />} />
-          <Route path="/inventory/:itemId" element={<ItemDetailsPage />} />
-          <Route path="/inventory/:itemId/edit" element={<EditInventoryPage />} />
-          <Route path="/inventory/new" element={<AddInventoryPage />} /> */}
         </Routes>
 
         <Footer />

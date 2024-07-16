@@ -89,10 +89,12 @@ const JobDetailsPage = () => {
             </section>
 
             <section className="job-details-page__actions">
-            <Link className="job-details-page__actions__button" to="#" onClick={handleApplyNow}>
-                  APPLY NOW <img src={arrowIcon} alt="Right Arrow" className="job-details-page__actions__icon" />
+              {!showApplicationForm && (
+                <Link className="job-details-page__actions__button" to="#" onClick={handleApplyNow}>
+                    APPLY NOW <img src={arrowIcon} alt="Right Arrow" className="job-details-page__actions__icon" />
                 </Link>
-                {showApplicationForm && <JobApplicationForm jobId={id} />}
+              )}
+              {showApplicationForm && <JobApplicationForm id={id} />}
             </section>
 
 
