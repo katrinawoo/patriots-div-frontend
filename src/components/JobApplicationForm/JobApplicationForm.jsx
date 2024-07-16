@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { apply } from '../../utils/api';
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import jobApplicationValidator from '../../utils/jobApplicationValidator';
+import SuccessPopup from "../SuccessPopup/SuccessPopup";
 import "./JobApplicationForm.scss";
 
 const MAX_INFORMATION_LENGTH = 1000;
@@ -17,6 +18,7 @@ const JobApplicationForm = ({ id }) => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleResumeChange = (e) => {
     setResume(e.target.files[0]);
@@ -54,8 +56,9 @@ for (let pair of formData.entries()) {
 
     try {
       await apply(id, formData);
-      setSuccessMessage('Application submitted successfully');
+      setSuccessMessage('Thanks Patriot, your application has been submitted!');
       setErrorMessage('');
+      setShowPopup(true);
       setName('');
       setEmail('');
       setLinkedin('');
@@ -63,7 +66,7 @@ for (let pair of formData.entries()) {
       setInformation('');
       setResume(null);
     } catch (error) {
-      setErrorMessage('Failed to submit application. Please try again.');
+      setErrorMessage('Failed mission to send application. Please try again.');
       setSuccessMessage('');
     }
   };
@@ -142,7 +145,7 @@ for (let pair of formData.entries()) {
       <button type="submit" className="job-application-form__submit__button">
         Submit <img src={arrowIcon} alt="Right Arrow" className="job-application-form__submit__icon" />
       </button>
-      {successMessage && <p className="job-application-form__success-message">{successMessage}</p>}
+      {successMessage && <SuccessPopup show={showPopup} title={successMessage} text="" />}
       {errorMessage && <p className="job-application-form__error-message">{errorMessage}</p>}
     </form>
   </div>

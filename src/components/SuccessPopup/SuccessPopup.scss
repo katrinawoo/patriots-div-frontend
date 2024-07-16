@@ -7,3 +7,15 @@
   background-color: $black-background;
   color: $white;
 }
+
+.custom-swal-button {
+  @include button-styling;
+  @include P3-buttons-text-style;
+  color: $white;
+  margin-top: 0.5rem;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%); // This will cut off the corners
+
+  &:hover {
+    background-color: $blue-button-hover;
+  }
+}
