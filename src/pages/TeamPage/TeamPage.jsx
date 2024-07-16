@@ -25,6 +25,8 @@ export default function TeamPage() {
                 allowFullScreen
                 ></iframe>
             </div>
+
+            <FooterLogo className="team-page__footer" />
         </div>
     </main>
 );
