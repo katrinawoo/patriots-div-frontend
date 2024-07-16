@@ -18,7 +18,7 @@
       pointer-events: none; // Prevent background from intercepting clicks
 
       @include tablet-breakpoint {
-        height: 30rem;
+        height: 32rem;
         clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%); // Adjust the percentage values to create the desired slant
       }
     }
