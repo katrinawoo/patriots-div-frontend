@@ -53,6 +53,11 @@
           letter-spacing: 0.02em;
         }
       }
+
+        &.error input,
+        &.error textarea {
+        border: 1px solid red;
+        }
   
       textarea {
         height: 6rem;
