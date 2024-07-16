@@ -349,13 +349,14 @@
 //BUTTONS STYLING
 @mixin button-styling {
     background-color: $blue-button;
-    padding: 1.25rem;
+    padding: 0.75rem;
     border: none;
     cursor: pointer;
     text-align: center;
     box-shadow: 0 0.22rem 3.34rem 0 rgba(red(#8B70A680), green(#8B70A680), blue(#8B70A680), 0.5); //0 3.57px 53.39px 0 #8B70A680 50%
     text-decoration: none;
     text-transform: uppercase;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0% 5%); // This will cut off the corners
 
     @include tablet-breakpoint(){
         padding-left: 1.5rem;

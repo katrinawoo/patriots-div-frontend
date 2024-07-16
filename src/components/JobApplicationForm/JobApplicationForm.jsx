@@ -4,12 +4,15 @@ import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import jobApplicationValidator from '../../utils/jobApplicationValidator';
 import "./JobApplicationForm.scss";
 
+const MAX_INFORMATION_LENGTH = 1000;
+
 const JobApplicationForm = ({ id }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [linkedin, setLinkedin] = useState('');
   const [links, setLinks] = useState('');
   const [information, setInformation] = useState('');
+  const [informationLength, setInformationLength] = useState(MAX_INFORMATION_LENGTH);
   const [resume, setResume] = useState(null);
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
@@ -17,6 +20,14 @@ const JobApplicationForm = ({ id }) => {
 
   const handleResumeChange = (e) => {
     setResume(e.target.files[0]);
+  };
+
+const handleInformationChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= MAX_INFORMATION_LENGTH) {
+      setInformation(value);
+      setInformationLength(MAX_INFORMATION_LENGTH - value.length);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -112,9 +123,10 @@ for (let pair of formData.entries()) {
           id="information"
           name="information"
           value={information}
-          onChange={(e) => setInformation(e.target.value)}
+          onChange={handleInformationChange}
           placeholder="Let us know why you think this role may be a good fit for you, or how your previous experience relates!"
         />
+        <p className="job-application-form__character-count">{informationLength} characters left</p>
       </div>
       <div className={`job-application-form__group ${errors.resume ? 'error' : ''}`}>
         <label htmlFor="resume"><h2>Resume:</h2><div>Format of .pdf only, maximum size 5 MB.</div></label>
