@@ -14,17 +14,20 @@
     gap: 2rem;
     margin-top: -1rem;
     padding-bottom: 10rem;
-    max-width: 1000px;
 
     @include tablet-breakpoint {
         align-items: center;
-        padding: 2rem;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 6rem;
         margin-top: -4rem;
+        
     }
 
     @include desktop-breakpoint {
       padding: 2rem 0 2rem 0;
       @include desktop-margins;
+      width: 90%;
     }
   }
 
