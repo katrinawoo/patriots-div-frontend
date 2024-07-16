@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { apply } from '../../utils/api';
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
+import jobApplicationValidator from '../../utils/jobApplicationValidator';
 import "./JobApplicationForm.scss";
 
 const JobApplicationForm = ({ id }) => {
@@ -10,6 +11,7 @@ const JobApplicationForm = ({ id }) => {
   const [links, setLinks] = useState('');
   const [information, setInformation] = useState('');
   const [resume, setResume] = useState(null);
+  const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -19,6 +21,12 @@ const JobApplicationForm = ({ id }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const validationErrors = jobApplicationValidator({ name, email, resume });
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
 
     const formData = new FormData();
     formData.append('name', name);
@@ -52,7 +60,7 @@ for (let pair of formData.entries()) {
   return (
     <div className="job-application-form__wrapper">
     <form className="job-application-form" onSubmit={handleSubmit}>
-      <div className="job-application-form__group">
+      <div className={`job-application-form__group ${errors.name ? 'error' : ''}`}>
         <label htmlFor="name"><h2>Name:</h2></label>
         <input
           type="text"
@@ -62,8 +70,9 @@ for (let pair of formData.entries()) {
           onChange={(e) => setName(e.target.value)}
           placeholder="Your Name"
         />
+        {errors.name && <p className="job-application-form__error-message">{errors.name}</p>}
       </div>
-      <div className="job-application-form__group">
+      <div className={`job-application-form__group ${errors.email ? 'error' : ''}`}>
         <label htmlFor="email"><h2>Email:</h2></label>
         <input
           type="email"
@@ -73,6 +82,7 @@ for (let pair of formData.entries()) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your.email@example.com"
         />
+        {errors.email && <p className="job-application-form__error-message">{errors.email}</p>}
       </div>
       <div className="job-application-form__group">
         <label htmlFor="linkedin"><h2>LinkedIn:</h2></label>
@@ -106,7 +116,7 @@ for (let pair of formData.entries()) {
           placeholder="Let us know why you think this role may be a good fit for you, or how your previous experience relates!"
         />
       </div>
-      <div className="job-application-form__group">
+      <div className={`job-application-form__group ${errors.resume ? 'error' : ''}`}>
         <label htmlFor="resume"><h2>Resume:</h2><div>Format of .pdf only, maximum size 5 MB.</div></label>
         <input
           type="file"
@@ -115,6 +125,7 @@ for (let pair of formData.entries()) {
           accept=".pdf"
           onChange={handleResumeChange}
         />
+        {errors.resume && <p className="job-application-form__error-message">{errors.resume}</p>}
       </div>
       <button type="submit" className="job-application-form__submit__button">
         Submit <img src={arrowIcon} alt="Right Arrow" className="job-application-form__submit__icon" />
