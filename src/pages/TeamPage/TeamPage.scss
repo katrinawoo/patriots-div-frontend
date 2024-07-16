@@ -29,7 +29,16 @@
     align-items: center;
 }
     &__video{
-        margin-top: 1rem;
-        padding-bottom: 2rem;
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        iframe {
+            width: 100%;
+            height: auto;
+            max-width: 680px;
+            aspect-ratio: 16/9;
+    }
     }
 }

@@ -256,15 +256,16 @@
 
   &__video {
     padding: 2rem;
-    // display: flex;
-    // justify-content: center;
-    // margin: 2rem 0;
-
-    // iframe {
-    //   width: 100%;
-    // //   max-width: 560px;
-    // //   height: 315px;
-    // }
+    width: 100%;
+    display: flex;
+    justify-content: center;
+        
+        iframe {
+            width: 100%;
+            height: auto;
+            max-width: 680px;
+            aspect-ratio: 16/9;
+    }
   }
 
   &__actions {
