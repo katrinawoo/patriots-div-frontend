@@ -59,6 +59,7 @@ for (let pair of formData.entries()) {
       setSuccessMessage('Thanks Patriot, your application has been submitted!');
       setErrorMessage('');
       setShowPopup(true);
+      setErrors({});
       setName('');
       setEmail('');
       setLinkedin('');
@@ -98,7 +99,7 @@ for (let pair of formData.entries()) {
         />
         {errors.email && <p className="job-application-form__error-message">{errors.email}</p>}
       </div>
-      <div className="job-application-form__group">
+      <div className={`job-application-form__group ${errors.linkedin ? 'error' : ''}`}>
         <label htmlFor="linkedin"><h2>LinkedIn:</h2></label>
         <input
           type="text"
@@ -108,8 +109,9 @@ for (let pair of formData.entries()) {
           onChange={(e) => setLinkedin(e.target.value)}
           placeholder="LinkedIn Profile URL"
         />
+        {errors.linkedin && <p className="job-application-form__error-message">{errors.linkedin}</p>}
       </div>
-      <div className="job-application-form__group">
+      <div className={`job-application-form__group ${errors.links ? 'error' : ''}`}>
         <label htmlFor="links"><h2>Other Links:</h2></label>
         <input
           type="text"
@@ -119,8 +121,9 @@ for (let pair of formData.entries()) {
           onChange={(e) => setLinks(e.target.value)}
           placeholder="Portfolio Links, Twitter Handle, etc.  Help us get to know you better!"
         />
+        {errors.links && <p className="job-application-form__error-message">{errors.links}</p>}
       </div>
-      <div className="job-application-form__group">
+      <div className={`job-application-form__group ${errors.information ? 'error' : ''}`}>
         <label htmlFor="information"><h2>Information:</h2></label>
         <textarea
           id="information"
@@ -129,6 +132,7 @@ for (let pair of formData.entries()) {
           onChange={handleInformationChange}
           placeholder="Let us know why you think this role may be a good fit for you, or how your previous experience relates!"
         />
+        {errors.information && <p className="job-application-form__error-message">{errors.information}</p>}
         <p className="job-application-form__character-count">{informationLength} characters left</p>
       </div>
       <div className={`job-application-form__group ${errors.resume ? 'error' : ''}`}>

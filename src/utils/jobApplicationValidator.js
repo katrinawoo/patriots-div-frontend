@@ -13,6 +13,12 @@ const jobApplicationValidator = ({ name, email, resume }) => {
 
   if (!resume) newErrors.resume = "This field is required";
 
+  if (!linkedin) newErrors.linkedin = "This field is required";
+
+  if (!links) newErrors.links = "This field is required";
+
+  if (!information) newErrors.information = "This field is required";
+
   return newErrors;
 };
 
