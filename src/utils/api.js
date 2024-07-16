@@ -45,3 +45,17 @@ export const sendContactMessage = async (name, email, message) => {
       throw error;
     }
   };
+
+  export const uploadResume = async (id, formData) => {
+    try {
+        const response = await axios.post(`${API_BASE_URL}/careers/${id}/uploadResume`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Error uploading resume:', error);
+        throw error;
+    }
+};

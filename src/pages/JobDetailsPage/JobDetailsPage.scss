@@ -22,9 +22,15 @@
           transition: all 0.8s ease;
           height: 42rem;
           clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%); // Adjust the percentage values to create the desired slant   
-          
+        
+          @media (min-width: 955px) {
+            transition: all 0.4s ease;
+            height: 33rem;
+          }
+        
+
         @include desktop-breakpoint{
-          height: 32rem;
+          height: 30rem;
           transition: all 0.8s ease;
         }
         }

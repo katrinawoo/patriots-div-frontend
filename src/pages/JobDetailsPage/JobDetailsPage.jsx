@@ -7,12 +7,17 @@ import { Link, useParams } from "react-router-dom";
 import { fetchPositionById } from "../../utils/api";
 import Header from "../../components/Header/Header";
 import heroBackground from "../../assets/images/12-hero-careers-background.png";
+import JobApplicationForm from "../../components/JobApplicationForm/JobApplicationForm";
 
 const JobDetailsPage = () => {
     const { id } = useParams();
     const [position, setPosition] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [showApplicationForm, setShowApplicationForm] = useState(false);
+    const handleApplyNow = () => {
+      setShowApplicationForm(true);
+    };
 
     useEffect(() => {
         console.log(`Fetching position with id: ${id}`); // Add this line for debugging
@@ -84,10 +89,10 @@ const JobDetailsPage = () => {
             </section>
 
             <section className="job-details-page__actions">
-                <Link className="job-details-page__actions__button" to="/careers">
-                  Apply Now <img src={arrowIcon} alt="Right Arrow" className="job-details-page__actions__icon" />
+            <Link className="job-details-page__actions__button" to="#" onClick={handleApplyNow}>
+                  APPLY NOW <img src={arrowIcon} alt="Right Arrow" className="job-details-page__actions__icon" />
                 </Link>
-                <div></div>
+                {showApplicationForm && <JobApplicationForm jobId={id} />}
             </section>
 
 
