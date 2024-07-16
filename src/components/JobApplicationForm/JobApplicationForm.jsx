@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'; // Added useRef import
+import { useState, useRef } from 'react';
 import { apply } from '../../utils/api';
 import arrowIcon from "../../assets/icons/Vector-button-arrow.png";
 import jobApplicationValidator from '../../utils/jobApplicationValidator';
@@ -154,13 +154,12 @@ const JobApplicationForm = ({ id }) => {
             ref={fileInputRef} // Added ref to file input
             style={{ display: 'none' }}
           />
-          <div job-application-form__file-box>
             <div onClick={handleFileButtonClick} className="job-application-form__file-button">
                 Choose File
             </div>
             {resumeName && <span className="job-application-form__file-name">{resumeName}</span>}
             {errors.resume && <p className="job-application-form__error-message">{errors.resume}</p>}
-          </div>
+          
         </div>
         <button type="submit" className="job-application-form__submit__button">
           Submit <img src={arrowIcon} alt="Right Arrow" className="job-application-form__submit__icon" />
