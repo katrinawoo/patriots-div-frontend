@@ -219,6 +219,11 @@
     text-decoration: none;
     text-transform: uppercase;
 
+    &:hover {
+        background-color: lighten($black-team, 10%); // Lighten the background color on hover
+        transform: translateY(-5px); // Slightly lift the box on hover
+    }
+
     &--location {
         padding: 1rem 1rem 0 1rem;
     }
