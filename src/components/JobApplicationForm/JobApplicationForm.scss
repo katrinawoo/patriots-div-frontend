@@ -76,6 +76,25 @@
       color: red;
       text-align: left;
     }
+
+    &__file-button {
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        @include button-styling;
+        @include P3-buttons-text-style;
+        width: 12rem;
+        color: $white;
+        &:hover {
+          background-color: $blue-button-hover; // Use the same hover color as your submit button
+        }
+      }
+    
+    &__file-name {
+        margin-top: 0.5rem;
+        font-size: 14px;
+        color: $blue-text;
+      }
   
     &__submit {
       display: flex;
