@@ -129,7 +129,7 @@ const JobApplicationForm = ({ id }) => {
           {errors.links && <p className="job-application-form__error-message">{errors.links}</p>}
         </div>
         <div className={`job-application-form__group ${errors.information ? 'error' : ''}`}>
-          <label htmlFor="information"><h2>Information:</h2></label>
+          <label htmlFor="information"><h2>Additional Information:</h2></label>
           <textarea
             id="information"
             name="information"
