@@ -1,6 +1,6 @@
 import validator from "validator";
 
-const jobApplicationValidator = ({ name, email, resume }) => {
+const jobApplicationValidator = ({ name, email, resume, linkedin, links, information }) => {
   const newErrors = {};
 
   if (!name) newErrors.name = "This field is required";

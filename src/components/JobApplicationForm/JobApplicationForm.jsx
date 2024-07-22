@@ -15,18 +15,18 @@ const JobApplicationForm = ({ id }) => {
   const [information, setInformation] = useState('');
   const [informationLength, setInformationLength] = useState(MAX_INFORMATION_LENGTH);
   const [resume, setResume] = useState(null);
-  const [resumeName, setResumeName] = useState(''); // Added state for resume name
+  const [resumeName, setResumeName] = useState('');
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
 
-  const fileInputRef = useRef(null); // Added file input ref
+  const fileInputRef = useRef(null)
 
   const handleResumeChange = (e) => {
     const file = e.target.files[0];
     setResume(file);
-    setResumeName(file ? file.name : ''); // Set resume name
+    setResumeName(file ? file.name : '');
   };
 
   const handleInformationChange = (e) => {
@@ -40,7 +40,7 @@ const JobApplicationForm = ({ id }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const validationErrors = jobApplicationValidator({ name, email, resume });
+    const validationErrors = jobApplicationValidator({ name, email, resume, linkedin, links, information });
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -66,7 +66,7 @@ const JobApplicationForm = ({ id }) => {
       setLinks('');
       setInformation('');
       setResume(null);
-      setResumeName(''); // Reset resume name
+      setResumeName('');
     } catch (error) {
       setErrorMessage('Failed mission to send application. Please try again.');
       setSuccessMessage('');
@@ -74,11 +74,11 @@ const JobApplicationForm = ({ id }) => {
   };
 
   const handleFileButtonClick = () => {
-    fileInputRef.current.click(); // Trigger file input click
+    fileInputRef.current.click();
   };
 
   return (
-    <div className="job-application-form__wrapper">
+    <section className="job-application-form__wrapper">
       <form className="job-application-form" onSubmit={handleSubmit}>
         <div className={`job-application-form__group ${errors.name ? 'error' : ''}`}>
           <label htmlFor="name"><h2>Name:</h2></label>
@@ -151,7 +151,7 @@ const JobApplicationForm = ({ id }) => {
             name="resume"
             accept=".pdf"
             onChange={handleResumeChange}
-            ref={fileInputRef} // Added ref to file input
+            ref={fileInputRef}
             style={{ display: 'none' }}
           />
             <div onClick={handleFileButtonClick} className="job-application-form__file-button">
@@ -167,7 +167,7 @@ const JobApplicationForm = ({ id }) => {
         {successMessage && <SuccessPopup show={showPopup} title={successMessage} text="" />}
         {errorMessage && <p className="job-application-form__error-message">{errorMessage}</p>}
       </form>
-    </div>
+    </section>
   );
 };
 
