@@ -72,6 +72,11 @@ export default function Footer() {
                         Jobs
                     </Link>
                 </div>
+                <div className="footer__links__title--sites">
+                    <Link to="/contacts">
+                        Contact us
+                    </Link>
+                </div>
             </article>
 
         </section>
