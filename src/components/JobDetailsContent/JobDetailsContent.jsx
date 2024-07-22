@@ -39,28 +39,28 @@ const JobDetailsContent = () => {
 
   return (
     <section className="job-details-content">
-      <div>
+      <article>
         <h1 className="job-details-content__title">What you'll do</h1>
         <div className="job-details-content__text">
           <p>{position.details}</p>
         </div>
-      </div>
-      <div>
+      </article>
+      <article>
         <h1 className="job-details-content__title">Experience required</h1>
         <ul className="job-details-content__list">
           {position.experience.map((exp, index) => (
             <li key={index}>{exp}</li>
           ))}
         </ul>
-      </div>
-      <div>
+      </article>
+      <article>
         <h1 className="job-details-content__title">More you need to know</h1>
         <div className="job-details-content__paragraph">
           {position.more.map((moreInfo, index) => (
             <p key={index}>{moreInfo}</p>
           ))}
         </div>
-      </div>
+      </article>
     </section>
   );
 };

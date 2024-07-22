@@ -21,8 +21,8 @@ const TeamBiosFull = () => {
 
     return (
         <main className='team-bios'>
-            <div className='team-bios__wrapper'>
-                <div className='team-bios__container'>
+            <section className='team-bios__wrapper'>
+                <article className='team-bios__container'>
                     {teamBios.map(bio => (
                         <div key={bio.id} className='team-bio'>
                             <img src={bio.image} alt={bio.name} className='team-bio__image'/>
@@ -43,8 +43,8 @@ const TeamBiosFull = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-            </div>
+                </article>
+            </section>
         </main>
     );
 };

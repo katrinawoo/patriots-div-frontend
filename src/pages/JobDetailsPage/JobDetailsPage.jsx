@@ -49,45 +49,36 @@ const JobDetailsPage = () => {
 
     return (
     <main>
-        <div className="job-details-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
-        <Header />
+        <header>
+          <div className="job-details-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+          <Header />
+        </header>
         <HeroJobDetails />
-
         <div className="job-details-page__wrapper">  
-            
-
             <section className="job-details-page__subheader">
-
-                <div>
-                    <h1 className="job-details-page__subheader__title">What you'll do</h1>
-                    
+                <article>
+                    <div className="job-details-page__subheader__title">What you'll do</div>
                     <div className="job-details-page__subheader__text">
                     <p>{position.details}</p>
                     </div>
-                </div>
-
-                <div>
-                    <h1 className="job-details-page__subheader__title">Experience required</h1>
-                    
+                </article>
+                <article>
+                    <div className="job-details-page__subheader__title">Experience required</div>
                     <ul className="job-details-page__subheader__list">
                          {position.experience.map((exp, index) => (
                             <li key={index}>{exp}</li>
                         ))}
                     </ul>
-                </div>
-
-                <div>
-                    <h1 className="job-details-page__subheader__title">More you need to know</h1>
-                    
+                </article>
+                <article>
+                    <div className="job-details-page__subheader__title">More you need to know</div>                   
                     <div className="job-details-page__subheader__paragraph">
                         {position.more.map((moreInfo, index) => (
                             <p key={index}>{moreInfo}</p>
                         ))}
                     </div>
-                </div>
-            
+                </article>            
             </section>
-
             <section className="job-details-page__actions">
               {!showApplicationForm && (
                 <Link className="job-details-page__actions__button" to="#" onClick={handleApplyNow}>
@@ -96,8 +87,6 @@ const JobDetailsPage = () => {
               )}
               {showApplicationForm && <JobApplicationForm id={id} />}
             </section>
-
-
             <FooterLogo className="job-details-page__footer" />
         </div>
     </main>

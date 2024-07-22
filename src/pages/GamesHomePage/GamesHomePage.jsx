@@ -10,14 +10,13 @@ import girlImage from "../../assets/images/26047-hero-girl.png"
 
 export default function GamesHomePage() {
 
-    
   return (
     <main className="games-home-page">
-        <div className="games-home-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
-        <img src={girlImage} alt="Hero Girl" className="games-home-page__girl-img" />
-        <Header />
-        <div>
-        
+        <header>
+            <div className="games-home-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+            <img src={girlImage} alt="Hero Girl" className="games-home-page__girl-img" />
+            <Header />
+        </header> 
         <div className="games-home-page__wrapper">  
             <HeroGames />
             <section className="games-home-page__actions">
@@ -26,42 +25,30 @@ export default function GamesHomePage() {
                 </a>
                 <div></div>
             </section>
-            <section className="games-home-page__header">
-
-               
+            <section className="games-home-page__header">   
                 <div className="games-home-page__header__line-container">
                     <div className="games-home-page__header__line games-home-page__header__gray-line"></div>
                     <div className="games-home-page__header__line games-home-page__header__blue-line"></div>
                 </div>
 
-                <div className="games-home-page__header__tagline">
+                <article className="games-home-page__header__tagline">
                     <p>our values</p>
                     <p>are our pillars</p>
-                </div>
+                </article>
                 
                 <p className="games-home-page__header__title">About Us</p>
                 
-                <div className="games-home-page__header__about">
+                <article className="games-home-page__header__about">
                     <p>Patriots Division is a game development company focused on creating next-generation digital experiences. Our studio is globally distributed, composed of creatives from all regions, industries, and backgrounds, with a shared experience in game development and passion for innovation.</p>
-                </div>
-            
+                </article>
             </section>
-
             <GamesHomeContent/>
-
             <section className="games-home-page__actions">
                 <Link className="games-home-page__actions__button" to="/careers">
                   Check Open Positions <img src={arrowIcon} alt="Right Arrow" className="games-home-page__actions__icon" />
                 </Link>
-                <div></div>
             </section>
-
             <FooterLogo className="games-home-page__footer" />
-        </div>
-        
-        
-        
-
         </div>
     </main>
 );

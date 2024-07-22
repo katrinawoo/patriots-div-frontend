@@ -46,7 +46,7 @@ const ContactsForm = () => {
   };
 
   return (
-    <div className="contacts-page__form__wrapper">
+    <section className="contacts-page__form__wrapper">
       <form className="contacts-page__form" onSubmit={handleSubmit}>
         <div className={`contacts-page__form--group ${errors.name ? 'error' : ''}`}>
           <label htmlFor="name"><h2>Name:</h2></label>
@@ -90,7 +90,7 @@ const ContactsForm = () => {
       </form>
       {successMessage && <SuccessPopup show={showPopup} title={successMessage} text="" />}
       {errorMessage && <p className="contacts-page__form__error-message">{errorMessage}</p>}
-    </div>
+    </section>
   );
 };
 

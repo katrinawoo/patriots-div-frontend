@@ -1,7 +1,6 @@
 import './HeroJobDetails.scss';
 import React, { useState, useEffect } from "react";
 import bannerGlow from '../../assets/icons/26178-banner-glow.png';
-// import heroCareersBackground from '../../assets/images/12-hero-careers-background.png';
 import { useParams } from "react-router-dom";
 import { fetchPositionById } from '../../utils/api';
 
@@ -42,7 +41,6 @@ const HeroJobDetails = () => {
 
   return (
     <section className="hero-job-details">
-      {/* <div className="hero-job-details__background" style={{ backgroundImage: `url(${heroCareersBackground})` }}></div> */}
       <div className="hero-job-details__wrapper">
         <div className="hero-job-details__content">
             <div className='hero-job-details__content__box1'>

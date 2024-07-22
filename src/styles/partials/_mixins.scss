@@ -29,6 +29,7 @@
 @mixin tablet-padding-sides {
   padding-right: $t-padding-sides;
   padding-left: $t-padding-sides;
+
   @include desktop-breakpoint() {
     padding-right: $d-padding-sides;
     padding-left: $d-padding-sides;
@@ -48,6 +49,7 @@
   z-index: 10;
   border-radius: 0.3125rem;
   box-shadow: 0rem 0.125rem 0.3125rem 0rem rgba(19, 24, 44, 0.1);
+
   @include tablet-breakpoint() {
     margin-top: -5.875rem; //121px-27px=94px above top of footer per figma
     width: calc(100% - 2 * $t-padding-sides);
@@ -62,6 +64,7 @@
   z-index: 10;
   border-radius: 0.3125rem;
   box-shadow: 0rem 0.125rem 0.3125rem 0rem rgba(19, 24, 44, 0.1);
+
   @include tablet-breakpoint() {
     margin-top: -5.875rem; //121px-27px=94px above top of footer per figma
   }
@@ -71,6 +74,7 @@
   height: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+
   @include tablet-breakpoint {
     display: flex;
     flex-direction: row;
@@ -101,9 +105,7 @@
         }
   }
 
-
 //TAGLINE
-
 @mixin H2-pageheader-text-style {
     font-size: 0.785rem; //12.56px
     line-height: 1.78rem; //28.5px
@@ -151,7 +153,6 @@
     color: $white-nav;
   }
 
-
 @mixin H6-pageheader-text-style {
     font-family: "Bebas Neue", sans-serif;
     font-size: 6.62rem; //105.89px
@@ -184,7 +185,6 @@
         }
   }
 
-
 @mixin H8-pageheader-text-style {
     font-family: "Bebas Neue", sans-serif;
     font-size: 3.69rem; //59.06px
@@ -200,7 +200,6 @@
         text-shadow: 0 4px 74.6px rgba(255, 255, 255, 0.5);
         }
   }
-
 
 @mixin H9-pageheader-text-style {
     font-family: "Bebas Neue", sans-serif;
@@ -239,7 +238,6 @@
         }
   }
 
-
 // For About Us Values text
 @mixin P2-pageheader-text-style {
     font-size: 0.66rem; //10.51px
@@ -267,7 +265,6 @@
         line-height: 1.78rem; //28.5px
         }
   }
-
 
   // For Nav Header Modal -- Footer
   @mixin P5-text-style {
@@ -345,7 +342,6 @@
   }
 }
 
-
 //BUTTONS STYLING
 @mixin button-styling {
     background-color: $blue-button;
@@ -375,4 +371,3 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
     }
-

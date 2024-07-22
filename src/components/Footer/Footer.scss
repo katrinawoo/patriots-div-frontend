@@ -96,7 +96,6 @@ padding-bottom: 0.5rem;
             opacity: 0.6;
 
             &:hover{
-                // font-size: 1rem;
                 color: $white;
             }
         }
@@ -104,7 +103,7 @@ padding-bottom: 0.5rem;
     
 
     &__column {
-        width: 50%; // Adjust width as needed
+        width: 50%;
         position: relative;
     
         &:nth-child(2) { // Assuming the middle column needs the border
@@ -115,7 +114,6 @@ padding-bottom: 0.5rem;
             left: 0;
             height: 100%;
             margin-left: -1rem;
-            // padding-left: 1rem;
             width: 1px; // Border width
             background-color: rgba(255, 255, 255, 0.15); // Border color with 15% opacity
           }

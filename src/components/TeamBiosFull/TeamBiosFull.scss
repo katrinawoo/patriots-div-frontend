@@ -87,8 +87,8 @@
         background: #FFFFFF;
         padding: 1rem 1rem;
         position: absolute; /* Position absolutely within the parent .team-bio */
-        bottom: -10px; /* Adjust this value to position the box */
-        left: -10px; /* Adjust this value to position the box */
+        bottom: -10px;
+        left: -10px;
         margin: 0;
         z-index: 20;
         clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%); // Adjust the percentage values to create the desired slant

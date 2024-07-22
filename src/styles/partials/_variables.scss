@@ -15,31 +15,25 @@ $blue-button-hover: #304d956d;
 $blue-button-shadow: #4560a4; 
 $red: #C94515; 
 
-
 //SCREEN BREAKPOINTS
 $min-mobile-screen: 320px;
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
-
 //WIDTH OF CONTENT FOR DESKTOP
 $desktop-width: 1020px; //added up components from layout grid in style guide 
 
-
 // TEXT STYLES
 $letter-spacing: 0.02em; //2% letter spacing on figma
-
 
 //FORM AND BUTTON PROPERTIES
 $radius: 20px;
 $border-button: 1px;
 
-
 // TABLET & DESKTOP BUTTON STYLES
 $tabletLabelButtonLineHeight: 1.375rem; //22px
 $m-button-height: 2.25rem; //36px
 $td-button-height: 2.375rem; //38px
-
 
 // PADDING PROPERTIES
 // $m for mobile, $t for tablet, $ for desktop 
@@ -64,7 +58,6 @@ $m-popup-padding-space: 1rem; // 16px
 $m-popup-padding-space-between-buttons: 1.0625rem; // 17px
 $td-popup-padding-space: 1rem; // 16px
 $td-popup-padding-space-double: 2rem; //32px
-
 
 // FORM AND SEARCH VARIABLES
 $form-padding-left: 1rem; //16px same for searchbar

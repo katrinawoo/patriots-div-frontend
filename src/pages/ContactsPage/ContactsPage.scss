@@ -34,7 +34,6 @@
     @include tablet-breakpoint {
         align-items: center;
         padding: 1.5rem 2rem;
-        // margin-top: -4rem;
         padding-top: 0;
     }
 
@@ -42,8 +41,6 @@
       padding: 2rem 0 0 0;
       @include desktop-margins;
     }
-
-    
   }
 
   &__header {
@@ -69,7 +66,6 @@
         padding-bottom: 2rem;
     }
 
-
     &__about {
         padding: 1rem 0;
         @include P1-pageheader-text-style;
@@ -81,9 +77,4 @@
         }
     }
   }
-}
-
-.footer-logo {
-        margin-left: -63rem;
-        margin-top: -47rem;
 }

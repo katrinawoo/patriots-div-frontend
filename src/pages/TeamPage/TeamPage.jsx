@@ -10,24 +10,23 @@ export default function TeamPage() {
     
   return (
     <main className="team-page">
-        <div className="team-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
-        <Header />
+        <header>
+            <div className="team-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+            <Header />
+        </header>
         <HeroTeam />
-        <div className="team-page__wrapper">
-            
+        <section className="team-page__wrapper">         
             <TeamBiosFull />
-
-            <div className="team-page__video">
+            <article className="team-page__video">
                 <iframe
                 src="https://www.youtube.com/embed/GenHD72bN9I?si=XtJT4oE9MxseYwT_"
                 title="Loyalty Protocol Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 ></iframe>
-            </div>
-
+            </article>
             <FooterLogo className="team-page__footer" />
-        </div>
+        </section>
     </main>
 );
 }

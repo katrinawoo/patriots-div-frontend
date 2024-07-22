@@ -2,7 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/global" as *;
 
-
 .team-page{
     &__background {
         background-size: cover;
@@ -12,7 +11,7 @@
         top: 0;
         left: 0;
         clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%); // Adjust the percentage values to create the desired slant
-        filter: brightness(0.6); // Darken the background image
+        filter: brightness(0.6);
         z-index: -200;
         pointer-events: none; // Prevent background from intercepting clicks
 
@@ -28,6 +27,7 @@
     flex-direction: column;
     align-items: center;
 }
+
     &__video{
         padding: 2rem;
         width: 100%;
@@ -39,6 +39,6 @@
             height: auto;
             max-width: 680px;
             aspect-ratio: 16/9;
-    }
+        }
     }
 }

@@ -9,12 +9,12 @@ const ContactsPage = () => {
   
   return (
     <main>
-        <div className="contacts-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
-        <Header />
-        
+        <header>
+          <div className="contacts-page__background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+          <Header />
+        </header>
         <HeroContacts />
         <div className="contacts-page__wrapper">
-          
           <section className="contacts-page__header">
             <div className="contacts-page__header__tagline contacts-page__tagline">
                 <p>Reach out and</p>
@@ -22,7 +22,6 @@ const ContactsPage = () => {
             <h1 className="contacts-page__header__title">Connect with us</h1>
             <div className="contacts-page__header__about">
                 <p>You can contact the team at Patriots Division through socials, or shoot us a message below.</p>
-                {/* <p>or shoot us a message below.</p> */}
             </div>
           </section>
         <ContactsForm />
