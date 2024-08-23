@@ -5,18 +5,38 @@ StartSite -- Phase 1 Implementation for client company Patriots Division
 The project is a website built with React Vite, it has two github repositories, with running instructions:
 
 BACKEND
-- https://github.com/katrinawoo/katrina-woo-patriots-div-backend
+- https://github.com/katrinawoo/patriots-div-backend.git
 -- Run backend first on VS code.
--- Clone git repository and navigate to the "main" branch.
+-- Clone git repository and navigate to the "main" branch in git bash.
 -- Connect to your MySQL server from git bash terminal using command "mysql -h 127.0.0.1 -u root -p patdiv".
--- In main branch, start server with command in terminal git bash with "npm start".
+—- Password is your local MySQL password, my password is “rootroot” (which is common in industry for ease of use and installation).  Let me know if you need SQL installation instructions.
+-- In main branch, first install dependencies with command in terminal git bash with “npm install”.
+-- Then start the server with command "npm start".
+—-- Server should start running on “port 8080” and should see the Database Config: {
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'rootroot',
+  database: 'patdiv'
+}
 -- Can check various tables in the database in MySQL with commands such as "SELECT * FROM job_applications;".
 
+
 FRONTEND
-- https://github.com/katrinawoo/katrina-woo-patriots-div
+- https://github.com/katrinawoo/patriots-div-backend.git
 -- Run frontend in VS code once backend server is running.
--- In main branch, start server with command in terminal git bash with "npm run dev".
--- The website should open in your browser using the local server.
+-- Clone git repository and navigate to the "main" branch in git bash.
+-- In main branch, first install dependencies with command in terminal git bash with “npm install”.
+-- Then start the server with command  "npm run dev".
+-- The website should open in your browser using the local server, in terminal click on link showing the “Local” location running the website.  
+I.e.: “npm run dev
+> katrina-woo-patriots-div@0.0.0 dev
+> vite
+  VITE v5.3.3  ready in 876 ms
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+“
+
 
 # Navigating the Startsite for Patriots Division
 - HOME/GAMES PAGE: the landing page. Referred to as GAMES in the nav bar.
