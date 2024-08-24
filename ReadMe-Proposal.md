@@ -22,7 +22,7 @@ BACKEND
 
 
 FRONTEND
-- https://github.com/katrinawoo/patriots-div-backend.git
+- https://github.com/katrinawoo/patriots-div-frontend.git
 -- Run frontend in VS code once backend server is running.
 -- Clone git repository and navigate to the "main" branch in git bash.
 -- In main branch, first install dependencies with command in terminal git bash with “npm install”.
