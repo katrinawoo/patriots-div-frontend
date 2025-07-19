@@ -58,6 +58,11 @@ export default function Footer() {
                         Shadow War
                     </Link>
                 </div>
+				<div className="footer__links__title--sites">
+                    <Link to="https://store.steampowered.com/app/3390280/Pay_2_Win_The_World_is_Mine/">
+                        Pay 2 Win
+                    </Link>
+                </div>
             </article>
 
             <article className="footer__links footer__links__column">
